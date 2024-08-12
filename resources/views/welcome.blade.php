@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laravel</title>
+
+    @vite(['resources/scss/app.scss'])
+</head>
+
+<body>
+    {{-- To make nav bar remove fixed-top --}}
+    <nav class="navbar fixed-top navbar-light">
+        <div class="container border-bottom border-secondary border-2 pt-2">
+            <a class="navbar-brand" href="#">
+                <img src="./img/Header.png" alt="" height="75">
+            </a>
+        </div>
+    </nav>
+    <section id="Header">
+        <img class="header_bg" src="./img/car-wallpaper.jpg" alt="car-wallpaper.jpg">
+        <div class="container d-flex flex-row-reverse">
+            <div class="section_content">
+                <h2 class="header_content-description">BEST</h2>
+                <h2 class="header_content-description">SERVICE IN</h2>
+                <h2 class="header_content-description">EAST</h2>
+                <h2 class="header_content-description">COAST</h2>
+            </div>
+        </div>
+    </section>
+    <section id="Main">
+        <div class="container mt-4">
+            <div class="row align-items-center">
+                <div class="col-9 p-2">
+                    <div class="main-item-md" id="main-item-1">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+                <div class="col-3 p-2">
+                    <div class="main-item-md" id="main-item-2">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-5 p-2">
+                    <div class="main-item-md" id="main-item-3">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+                <div class="col-7 p-2">
+                    <div class="main-item-md" id="main-item-4">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-4 p-2">
+                    <div class="main-item-md" id="main-item-5">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="main-item-md" id="main-item-6">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+                <div class="col-4 p-2">
+                    <div class="main-item-md" id="main-item-7">
+                        <h2 class="main-item-header">Title</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="Contact">
+        <div class="container mt-4">
+            <div class="row align-items-center">
+                <div class="col-12 contact-item-md">
+                    <div class="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-6 contact-item-md">
+                    <div class="reach-us border border-black border-2 container h-100">
+                        <div class="fs-2">
+                            <strong>HOW TO REACH US</strong>
+                        </div>
+                        <div>Phone: 999-777-1231</div>
+                        <div class="border-black border-bottom border-2">e-mail: sebgallant@hotmail.com</div>
+                        <div class="fs-2">
+                            <strong>Location</strong>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>GP Transsmision</li>
+                            <li>47 Rue Vanier</li>
+                            <li>Campbellton</li>
+                            <li>E3N 1T8</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 contact-item-md">
+                    <div class="business-hours">
+                        <h2 class="title p-4">Business Hours</h2>
+                        <div class="container">
+                            <ul class="row list-unstyled p-2 opening-hour">
+                                <li class="col-6 text-end border-end">MONDAY</li>
+                                <li class="col-6">8:00-17:00</li>
+                                <li class="col-6 text-end border-end">TUESDAY</li>
+                                <li class="col-6">8:00-17:00</li>
+                                <li class="col-6 text-end border-end">WEDNESDAY</li>
+                                <li class="col-6">8:00-17:00</li>
+                                <li class="col-6 text-end border-end">THURSDAY</li>
+                                <li class="col-6">8:00-17:00</li>
+                                <li class="col-6 text-end border-end">FRIDAY</li>
+                                <li class="col-6">8:00-17:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 contact-item-md">
+
+                    <div class="appointment d-flex justify-content-center">
+                        <a>Click Here To Make Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @vite(['resources/js/app.js'])
+</body>
+
+</html>

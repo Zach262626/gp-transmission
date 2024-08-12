@@ -1,0 +1,14 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+
+## How to install Project
+
+* Clone Project
+* copy env.example add a empty local database
+* run npm install and composer install
+* run npm run build
+* run the migration table
+* To start the server run npm run dev and virtual on wamp
+
+
+
