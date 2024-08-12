@@ -8,7 +8,7 @@
 * run npm install and composer install
 * run npm run build
 * run the migration table
-* To start the server run npm run dev and virtual on wamp
+* To start the server run npm run dev and virtual on 
 
 
 

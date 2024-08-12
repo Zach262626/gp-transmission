@@ -90,27 +90,15 @@ body, html {
         height: 300px;
         padding: 0.5vw;
         color: $light;
-         border:1px solid white;
         .reach-us {
             color:black;
         }
         .business-hours {
-            height: 100%;
-            width: 100%;
             color:white;
-            background-color: black;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
         .appointment {
-            background-color: $primary;
             color:black;
         }
-    }
-    .contact-item-md:last-child {
-        height: 150px;
     }
     //contact-items
 
