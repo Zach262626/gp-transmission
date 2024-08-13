@@ -40,6 +40,7 @@ body, html {
     display: grid;
     place-items: center;
     position: relative;
+    box-shadow: inset 0 0 10px black;
     //main
     .main-item-md {
         height: 250px;
@@ -86,7 +87,6 @@ body, html {
     place-items: center;
     position: relative;
     background-color: $secondary;
-    box-shadow: inset 0 0  20px black;
     //contact
     .contact-map {
         background-color: black;
