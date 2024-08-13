@@ -21,8 +21,8 @@
     </nav>
     <section id="Header">
         <img class="header_bg" src="./img/car-wallpaper.jpg" alt="car-wallpaper.jpg">
-        <div class="container d-flex flex-row-reverse">
-            <div class="section_content">
+        <div class="container">
+            <div class="section_content text-end">
                 <h2 class="header_content-description">BEST</h2>
                 <h2 class="header_content-description">SERVICE IN</h2>
                 <h2 class="header_content-description">EAST</h2>
