@@ -102,12 +102,12 @@
 
             <div class="row align-items-center">
                 <div class="col-6 contact-item-md">
-                    <div class="reach-us shadow-lg border border-black border-2 container h-100">
+                    <div class="reach-us shadow-lg border border-black border-1 container h-100">
                         <div class="fs-2">
                             <strong>HOW TO REACH US</strong>
                         </div>
                         <div>Phone: 999-777-1231</div>
-                        <div class="border-black border-bottom border-2">e-mail: sebgallant@hotmail.com</div>
+                        <div class="border-middle pb-2">e-mail: sebgallant@hotmail.com</div>
                         <div class="fs-2">
                             <strong>Location</strong>
                         </div>
@@ -120,37 +120,37 @@
                     </div>
                 </div>
                 <div class="col-6 contact-item-md">
-                    <div class="business shadow-lg bg-black container h-100">
+                    <div class="business shadow-lg container h-100">
                         <div class="row text-center">
                             <h2 class="pb-0 mb-0">Business</h2>
                             <h2 class="pt-0 mt-0">Hours</h2>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">MONDAY</div>
+                            <div class="col text-end">MONDAY</div>
                             <div class="col">8:00-17:00</div>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">TUESDAY</div>
+                            <div class="col text-end">TUESDAY</div>
                             <div class="col">8:00-17:00</div>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">WEDNESDAY</div>
+                            <div class="col text-end">WEDNESDAY</div>
                             <div class="col">8:00-17:00</div>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">THURSDAY</div>
+                            <div class="col text-end">THURSDAY</div>
                             <div class="col">8:00-17:00</div>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">FRIDAY</div>
+                            <div class="col text-end">FRIDAY</div>
                             <div class="col">8:00-12:00</div>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">SATURDAY</div>
+                            <div class="col text-end">SATURDAY</div>
                             <div class="col">CLOSED</div>
                         </div>
                         <div class="row">
-                            <div class="col text-end border-end">SUNDAY</div>
+                            <div class="col text-end">SUNDAY</div>
                             <div class="col">CLOSED</div>
                         </div>
                     </div>
@@ -159,15 +159,15 @@
                         <h2 class="title p-4">Business Hours</h2>
                         <div class="container">
                             <ul class="row list-unstyled p-2 opening-hour">
-                                <li class="col-6 text-end border-end">MONDAY</li>
+                                <li class="col-6 text-end">MONDAY</li>
                                 <li class="col-6">8:00-17:00</li>
-                                <li class="col-6 text-end border-end">TUESDAY</li>
+                                <li class="col-6 text-end">TUESDAY</li>
                                 <li class="col-6">8:00-17:00</li>
-                                <li class="col-6 text-end border-end">WEDNESDAY</li>
+                                <li class="col-6 text-end">WEDNESDAY</li>
                                 <li class="col-6">8:00-17:00</li>
-                                <li class="col-6 text-end border-end">THURSDAY</li>
+                                <li class="col-6 text-end">THURSDAY</li>
                                 <li class="col-6">8:00-17:00</li>
-                                <li class="col-6 text-end border-end">FRIDAY</li>
+                                <li class="col-6 text-end">FRIDAY</li>
                                 <li class="col-6">8:00-17:00</li>
                             </ul>
                         </div>
@@ -175,11 +175,13 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-12  contact-item-md" style="height: 150px;">
-                    <button type="button" class="btn btn-primary shadow-lg w-100 h-100 fs-1 appointment"><strong>CLICK HERE TO
+                    <button type="button" class="btn btn-secondary shadow-lg w-100 h-100 fs-1 appointment"><strong>CLICK HERE TO
                             MAKE AN APPOINTMENT</strong></button>
                 </div>
             </div>
         </div>
+    </section>
+    <section id="Footer" class="" style="height: 150px;">
     </section>
     @vite(['resources/js/app.js'])
 </body>
