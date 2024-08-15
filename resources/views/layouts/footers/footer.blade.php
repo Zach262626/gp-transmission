@@ -1,6 +1,7 @@
 <style>
 #Footer {
     height: 150px;
+    background-color: #000C21;/*$dark */
 }
 </style>
 

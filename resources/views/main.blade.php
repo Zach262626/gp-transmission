@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'MainPage'])
+@extends('layouts.app', ['activePage' => 'MainPage'])  {{--**IMPORTANT TO ADD activePage for styling**--}}
 @include('layouts.navbars.nav_top')
 <section id="Header">
     <img class="header_bg" src="./img/car-wallpaper.jpg" alt="car-wallpaper.jpg">
@@ -151,4 +151,5 @@
         </div>
     </div>
 </section>
+@include('layouts.footers.footer')
 
