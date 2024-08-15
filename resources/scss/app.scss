@@ -14,8 +14,10 @@ $headings-font-family: "Arimo", sans-serif;
 $body-bg: $primary;
 
 
-//bootstrap
+
+/* bootstrap */
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-//Custom scss
-@import "./main.scss";
+/* CUSTOM SCSS */
+//main.scss
+@import "./pages/main.scss";
 

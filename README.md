@@ -11,4 +11,5 @@
 * To start the server run npm run dev and virtual on 
 
 
-
+reminder:
+For form: php artisan make:component Forms/Appointment
