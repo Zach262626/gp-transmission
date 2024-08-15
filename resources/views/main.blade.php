@@ -71,8 +71,8 @@
     </div>
 
 </section>
-<section id="Review">
-</section>
+{{-- <section id="Review">
+</section> --}}
 <section id="Contact">
     <div class="container my-5">
         <div class="row align-items-center">
