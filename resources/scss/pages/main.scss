@@ -1,10 +1,15 @@
 //functional variables
-    $transitionall: all 250ms ease-in-out;
     $text-shadow: 0 1rem 3rem $dark;
+@media (min-width: 768px) {
+    .header_content-description {
+        letter-spacing: 0.3em;
+    }
+}
 #MainPage {
     body, html {
         scroll-behavior: smooth;
     }
+    //sections
     #Header {
         height: 100vh;
         display: grid;
@@ -30,54 +35,67 @@
         }
         .header_content-description {
             font-size: 7.5vh;
-            letter-spacing: 0.3em;
             opacity: 0.9;
             color: #D9D9D9;
             text-shadow: $text-shadow;
+        }
+            // Button
+        .appointment-button {
+            letter-spacing: 0.1em;
+            color:$light;
+            transition: ease 500ms;
+        }
+        .appointment-button:hover {
+            color:$dark;
+            background-color: $light;
+            transform: translate(0, -10px);
+            border: 2px solid $dark;
         }
     }
     #Main {
         display: grid;
         place-items: center;
         position: relative;
-        background-color: $dark;
+        background-color: rgb(235, 235, 235);
         //main
         .main-item-md {
             border-radius: 25px;
             height: 250px;
             padding: 1.5vw;
-            background-color: $secondary;
-            color:$light;
-            transition: 0.1s;
-            transition-timing-function: ease-in;
+            background-color: $light;
+            color:$dark;
+            border: 2px solid $dark;
         }
         .main-item-md:hover {
-            background-color:$primary;
-
+            transition: 0.3s;
+            transition-timing-function: ease-in;
+            background-color:$dark;
+            color:$light;
         }
-        #main-item-1:hover {
-            transform: translate(-50px, 0);
-        }
-        #main-item-2:hover {
-            transform: translate(50px, 0);
-        }
-        #main-item-3:hover {
-            transform: translate(-50px, 0);
-        }
-        #main-item-4:hover {
-            transform: translate(50px, 0);
-        }
-        #main-item-5:hover {
-            transform: translate(-50px, 0);
-        }
-        #main-item-6:hover {
-            transform: translate(0, 25px);
-        }
-        #main-item-7:hover {
-            transform: translate(50px, 0);
-        }
-        // .main-item-header {
+        // #main-item-1:hover {
+        //     transform: translate(-50px, 0);
         // }
+        // #main-item-2:hover {
+        //     transform: translate(50px, 0);
+        // }
+        // #main-item-3:hover {
+        //     transform: translate(-50px, 0);
+        // }
+        // #main-item-4:hover {
+        //     transform: translate(50px, 0);
+        // }
+        // #main-item-5:hover {
+        //     transform: translate(-50px, 0);
+        // }
+        // #main-item-6:hover {
+        //     transform: translate(0, 25px);
+        // }
+        // #main-item-7:hover {
+        //     transform: translate(50px, 0);
+        // }
+        .main-item-header {
+            font-weight: bolder;
+        }
         .main-item-description {
             margin-left: 10px;
             margin-right: 10px;
@@ -85,7 +103,7 @@
     }
     #Review {
         height: 500px;
-        background-color: $info;
+        background-color: $dark;
     }
     #Contact {
         padding-bottom: 100px;
@@ -138,16 +156,17 @@
                 }
 
             }
-            .appointment {
-                color:white;
-                transition: ease 500ms;
-            }
-            .appointment:hover {
-                background-color: $primary;
-                transform: translate(0, -10px);
-            }
+        }
+         // Button
+        .appointment-button {
+            color:$dark;
+            transition: ease 500ms;
+        }
+        .appointment-button:hover {
+            color:$light;
+            background-color: $dark;
+            transform: translate(0, -10px);
         }
         //contact-items
-
     }
 }

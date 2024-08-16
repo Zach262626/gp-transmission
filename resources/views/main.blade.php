@@ -3,66 +3,74 @@
 <section id="Header">
     <img class="header_bg" src="./img/car-wallpaper.jpg" alt="car-wallpaper.jpg">
     <div class="container">
-        <div class="section_content text-end">
-            <h2 class="header_content-description">BEST</h2>
-            <h2 class="header_content-description">SERVICE IN</h2>
-            <h2 class="header_content-description">EAST</h2>
-            <h2 class="header_content-description">COAST</h2>
+        <div class="section_content row">
+            <div class="col-12">
+                <h2 class="header_content-description">BEST SERVICE</h2>
+                <h2 class="header_content-description">IN THE</h2>
+                <h2 class="header_content-description">EAST COAST</h2>
+            </div>
+        </div>
+        <div class="section_content row mt-5">
+            <div class="col-12">
+                <button type="button"class="btn border border-light border-2 shadow-lg h-100 fs-2 rounded-pill appointment-button">
+                    <strong>BOOK HERE</strong>
+                </button>
+            </div>
         </div>
     </div>
 </section>
 <section id="Main">
     <div class="container mt-4">
-        <div class="row align-items-center mt-3">
-            <div class="col-md-9 p-2 ">
-                <div class="main-item-md shadow-lg" id="main-item-1">
-                    <h2 class="main-item-header">Title</h2>
-                    <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                        Precision Auto Tech can even set up a schedule for youthree columns</div>
-                </div>
-            </div>
-            <div class="col-md-3 p-2">
-                <div class="main-item-md shadow-lg" id="main-item-2">
-                    <h2 class="main-item-header">Title</h2>
-                    <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                        Precision Auto Tech can even set up a schedule for youthree columns</div>
-                </div>
-            </div>
-        </div>
         <div class="row align-items-center">
             <div class="col-md-5 p-2">
                 <div class="main-item-md shadow-lg" id="main-item-3">
-                    <h2 class="main-item-header">Title</h2>
+                    <h2 class="main-item-header">TITLE</h2>
                     <div class="main-item-description">Everyone knows the importance of regular oil changes -
                         Precision Auto Tech can even set up a schedule for youthree columns</div>
                 </div>
             </div>
             <div class="col-md-7 p-2">
                 <div class="main-item-md shadow-lg" id="main-item-4">
-                    <h2 class="main-item-header">Title</h2>
+                    <h2 class="main-item-header">TITLE</h2>
                     <div class="main-item-description">Everyone knows the importance of regular oil changes -
                         Precision Auto Tech can even set up a schedule for youthree columns</div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center">
             <div class="col-md-4 p-2">
                 <div class="main-item-md shadow-lg" id="main-item-5">
-                    <h2 class="main-item-header">Title</h2>
+                    <h2 class="main-item-header">TITLE</h2>
                     <div class="main-item-description">Everyone knows the importance of regular oil changes -
                         Precision Auto Tech can even set up a schedule for youthree columns</div>
                 </div>
             </div>
             <div class="col-md-4 p-2">
                 <div class="main-item-md shadow-lg" id="main-item-6">
-                    <h2 class="main-item-header">Title</h2>
+                    <h2 class="main-item-header">TITLE</h2>
                     <div class="main-item-description">Everyone knows the importance of regular oil changes -
                         Precision Auto Tech can even set up a schedule for youthree columns</div>
                 </div>
             </div>
             <div class="col-md-4 p-2">
                 <div class="main-item-md shadow-lg" id="main-item-7">
-                    <h2 class="main-item-header">Title</h2>
+                    <h2 class="main-item-header">TITLE</h2>
+                    <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                        Precision Auto Tech can even set up a schedule for youthree columns</div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-5">
+            <div class="col-md-7 p-2">
+                <div class="main-item-md shadow-lg" id="main-item-3">
+                    <h2 class="main-item-header">TITLE</h2>
+                    <div class="main-item-description">Everyone knows the importance of regular oil changes -
+                        Precision Auto Tech can even set up a schedule for youthree columns</div>
+                </div>
+            </div>
+            <div class="col-md-5 p-2">
+                <div class="main-item-md shadow-lg" id="main-item-4">
+                    <h2 class="main-item-header">TITLE</h2>
                     <div class="main-item-description">Everyone knows the importance of regular oil changes -
                         Precision Auto Tech can even set up a schedule for youthree columns</div>
                 </div>
@@ -72,6 +80,7 @@
 
 </section>
 <section id="Review">
+    
 </section>
 <section id="Contact">
     <div class="container my-5">
@@ -145,7 +154,7 @@
         <div class="row align-items-center">
             <div class="col-md-12  contact-item-md" style="height: 150px;">
                 <button type="button"
-                    class="btn btn-secondary shadow-lg w-100 h-100 fs-1 appointment"><strong>CLICK HERE TO
+                    class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK HERE TO
                         MAKE AN APPOINTMENT</strong></button>
             </div>
         </div>
