@@ -7,9 +7,14 @@ export default defineConfig({
             input: [
                 'resources/scss/app.scss',
                 'resources/js/app.js',
-                'resources/css/app.css'
                 ],
             refresh: true,
         }),
     ],
+    resolve: {
+        alias: {
+            '@': '/resources',
+            '$': 'JQuery'
+        }
+    }
 });
