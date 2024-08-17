@@ -81,12 +81,11 @@
         </div>
 
     </section>
-    <section id="Review">
+    {{-- <section id="Review">
         <div class="owl-carousel">
             <div class="item">
                 <div class="container border border-2 border-dark h-100">
-                    <div class="fs-1">This Is the header</div>
-                    <div class="">This is the information</div>
+                    @include('widgets.google_review')
                 </div>
             </div>
             <div class="item"><h4>2</h4></div>
@@ -101,7 +100,7 @@
             <div class="item"><h4>11</h4></div>
             <div class="item"><h4>12</h4></div>
         </div>
-    </section>
+    </section> --}}
     <section id="Contact">
         <div class="container my-5">
             <div class="row align-items-center">
@@ -180,8 +179,7 @@
             </div>
         </div>
     </section>
-    <script type="module" >
-        
+    <script type="module" >  
         $(document).ready(function () {
             (function ($) {
                 $('.owl-carousel').owlCarousel({
@@ -195,24 +193,6 @@
                     animateOut: 'fadeOut'
                 })
             })(jQuery);
-            // (function ($) {
-            //     $('.owl-carousel').owlCarousel({
-            //         loop:true,
-            //         margin:10,
-            //         nav:true,
-            //         responsive:{
-            //             0:{
-            //                 items:1
-            //             },
-            //             600:{
-            //                 items:3
-            //             },
-            //             1000:{
-            //                 items:5
-            //             }
-            //         }
-            //     });
-            // })(jQuery);
         });
     </script>
     @include('layouts.footers.footer')

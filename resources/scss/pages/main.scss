@@ -56,7 +56,8 @@
         display: grid;
         place-items: center;
         position: relative;
-        background-color: rgb(235, 235, 235);
+        // background-color: rgb(235, 235, 235);
+        background-color: $dark;
         //main
         .main-item-md {
             border-radius: 25px;
@@ -67,8 +68,9 @@
             border: 2px solid $dark;
         }
         .main-item-md:hover {
-            transition: 0.3s;
+            transition: 0.2s;
             transition-timing-function: ease-in;
+            border: 2px solid $light;
             background-color:$dark;
             color:$light;
         }
@@ -101,21 +103,21 @@
             margin-right: 10px;
         }
     }
-    #Review {
-        height: 400px;
-        background-color: $info;
-        align-content: center;
-        text-align: center;
-        .owl-carousel {
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .item {
-            // border:2px solid $dark;
-            height: 300px;
-        }
-    }
+    // #Review {
+    //     height: 400px;
+    //     background-color: $info;
+    //     align-content: center;
+    //     text-align: center;
+    //     .owl-carousel {
+    //         width: 90%;
+    //         margin-left: auto;
+    //         margin-right: auto;
+    //     }
+    //     .item {
+    //         // border:2px solid $dark;
+    //         height: 300px;
+    //     }
+    // }
     #Contact {
         padding-bottom: 100px;
         display: grid;
