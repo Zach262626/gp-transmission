@@ -1,8 +1,8 @@
 {{-- To make nav bar remove fixed-top --}}
-<nav class="navbar fixed-top navbar-dark navbar-expand-lg">
-    <div class="border-bottom border-dark w-100 border-2 p-1">
+<nav class="navbar fixed-top navbar-light navbar-expand-lg">
+    <div class="container border-bottom border-secondary border-2 pt-2">
         <a class="navbar-brand" href="#">
-            <img class="px-4" src="./img/Header.png" alt="" height="75">
+            <img src="./img/Header.png" alt="" height="75">
         </a>
     </div>
 </nav>

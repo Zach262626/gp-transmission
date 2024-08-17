@@ -1,10 +1,10 @@
 //functional variables
     $text-shadow: 0 1rem 3rem $dark;
-@media (min-width: 768px) {
-    .header_content-description {
-        letter-spacing: 0.3em;
-    }
-}
+// @media (min-width: 768px) {
+//     .header_content-description {
+//         letter-spacing: 0.3em;
+//     }
+// }
 #MainPage {
     body, html {
         scroll-behavior: smooth;
@@ -102,8 +102,19 @@
         }
     }
     #Review {
-        height: 500px;
-        background-color: $dark;
+        height: 400px;
+        background-color: $info;
+        align-content: center;
+        text-align: center;
+        .owl-carousel {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .item {
+            // border:2px solid $dark;
+            height: 300px;
+        }
     }
     #Contact {
         padding-bottom: 100px;
