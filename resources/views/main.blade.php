@@ -13,9 +13,9 @@
                 </div>
             </div>
             <div class="section_content row mt-5">
-                <div class="col-12">
-                    <button type="button"class="btn border border-light border-2 shadow-lg h-100 fs-2 rounded-pill appointment-button">
-                        <strong>BOOK HERE</strong>
+                <div class="col-12 mt-5">
+                    <button type="button"class="btn shadow-lg h-100 fs-2 rounded appointment-button">
+                        <strong>BOOK AN APPOINTMENT HERE</strong>
                     </button>
                 </div>
             </div>
@@ -141,23 +141,23 @@
                         </div>
                         <div class="row">
                             <div class="col text-end">MONDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">TUESDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">WEDNESDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">THURSDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">FRIDAY</div>
-                            <div class="col">8:00-12:00</div>
+                            <div class="col">7:00-12:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">SATURDAY</div>

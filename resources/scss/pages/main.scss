@@ -42,14 +42,19 @@
             // Button
         .appointment-button {
             letter-spacing: 0.1em;
-            color:$light;
+            color:$dark;
+            background-color: $light;
             transition: ease 500ms;
         }
         .appointment-button:hover {
+            color:$light;
+            background-color: rgba(255, 255, 255, 0);
+            transform: translate(0, -10px);
+            border: 2px solid $light;
+        }
+        .appointment-button:active {
             color:$dark;
             background-color: $light;
-            transform: translate(0, -10px);
-            border: 2px solid $dark;
         }
     }
     #Main {
