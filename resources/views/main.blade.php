@@ -26,55 +26,51 @@
             <div class="row align-items-center">
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-3">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">TIRES</h2>
+                        <div class="main-item-description">Preventative maintenance to keep your car moving, and repairs for when it is too late</div>
                     </div>
                 </div>
                 <div class="col-md-7 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-4">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">TRANSMISSIONS</h2>
+                        <div class="main-item-description">Preventative maintenance to keep your car moving, and repairs for when it is too late</div>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-5">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">AIR
+                            CONDITIONING</h2>
+                        <div class="main-item-description">Keep yourself cool and comfortable while driving in Ottawa's hot and humid summers</div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-6">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">OIL
+                            CHANGES</h2>
+                        <div class="main-item-description">Everyone knows the importance of regular oil changes - Precision Auto Tech can even set up a schedule for you</div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-7">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">BRAKES</h2>
+                        <div class="main-item-description">Avoid potential brake failures - come in for a brake suspension and get peace of mind</div>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center mb-5">
                 <div class="col-md-7 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-3">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">TUNE
+                            UPS</h2>
+                        <div class="main-item-description">Our technicians can spot small difficulties before they become expensive problems</div>
                     </div>
                 </div>
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-4">
-                        <h2 class="main-item-header">TITLE</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes -
-                            Precision Auto Tech can even set up a schedule for youthree columns</div>
+                        <h2 class="main-item-header">SUSPENSIONS</h2>
+                        <div class="main-item-description">We can help make your ride more comfortable with our expertise in suspension repairs</div>
                     </div>
                 </div>
             </div>
