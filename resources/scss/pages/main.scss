@@ -1,12 +1,13 @@
 //functional variables
-    $text-shadow: 0 1rem 3rem $dark;
+$text-shadow: 0 1rem 3rem $dark;
 // @media (min-width: 768px) {
 //     .header_content-description {
 //         letter-spacing: 0.3em;
 //     }
 // }
 #MainPage {
-    body, html {
+    body,
+    html {
         scroll-behavior: smooth;
     }
     //sections
@@ -36,24 +37,24 @@
         .header_content-description {
             font-size: 7.5vh;
             opacity: 0.9;
-            color: #D9D9D9;
+            color: #d9d9d9;
             text-shadow: $text-shadow;
         }
-            // Button
+        // Button
         .appointment-button {
             letter-spacing: 0.1em;
-            color:$dark;
+            color: $dark;
             background-color: $light;
             transition: ease 500ms;
         }
         .appointment-button:hover {
-            color:$light;
+            color: $light;
             background-color: rgba(255, 255, 255, 0);
             transform: translate(0, -10px);
             border: 2px solid $light;
         }
         .appointment-button:active {
-            color:$dark;
+            color: $dark;
             background-color: $light;
         }
     }
@@ -69,15 +70,15 @@
             height: 250px;
             padding: 1.5vw;
             background-color: $light;
-            color:$dark;
+            color: $dark;
             border: 2px solid $dark;
         }
         .main-item-md:hover {
             transition: 0.2s;
             transition-timing-function: ease-in;
             border: 2px solid $light;
-            background-color:$dark;
-            color:$light;
+            background-color: $dark;
+            color: $light;
         }
         // #main-item-1:hover {
         //     transform: translate(-50px, 0);
@@ -137,12 +138,12 @@
         //contact-items
         .contact-item-md {
             list-style-type: none;
-            padding:2px;
+            padding: 2px;
             height: 300px;
             padding: 0.5vw;
             color: $light;
             .reach-us {
-                color:$dark;
+                color: $dark;
                 transition: ease 500ms;
                 .border-middle {
                     border-bottom: 1px solid $dark;
@@ -157,7 +158,7 @@
                 }
             }
             .business {
-                color:white;
+                color: white;
                 background-color: $dark;
                 transition: ease 500ms;
                 .text-end {
@@ -165,23 +166,22 @@
                 }
             }
             .business:hover {
-                color:$dark;
+                color: $dark;
                 background-color: white;
                 transform: translate(0, -10px);
                 border: 1px solid $dark;
                 .text-end {
                     border-right: 1px solid $dark;
                 }
-
             }
         }
-         // Button
+        // Button
         .appointment-button {
-            color:$dark;
+            color: $dark;
             transition: ease 500ms;
         }
         .appointment-button:hover {
-            color:$light;
+            color: $light;
             background-color: $dark;
             transform: translate(0, -10px);
         }

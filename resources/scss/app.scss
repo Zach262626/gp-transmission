@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dela+Gothic+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dela+Gothic+One&display=swap");
 
-$primary: #2D3B62;
-$secondary: #2F64AE;
-$info: #BBBBBB;
-$light: #D9D9D9;
-$dark: #000C21;
-
+$primary: #2d3b62;
+$secondary: #2f64ae;
+$info: #bbbbbb;
+$light: #d9d9d9;
+$dark: #000c21;
 
 $font-family-base: "Arimo", sans-serif;
 
@@ -13,11 +12,9 @@ $headings-font-family: "Arimo", sans-serif;
 
 $body-bg: $primary;
 
-$enable-transitions: 'true';
+$enable-transitions: "true";
 
-$enable-shadows: 'true';
-
-
+$enable-shadows: "true";
 
 /* bootstrap */
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'MainPage'])  {{--**IMPORTANT TO ADD activePage for styling**--}}
+@extends('layouts.app', ['activePage' => 'MainPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 @include('layouts.navbars.nav_top')
 
 @section('content')
@@ -173,23 +173,24 @@
             <div class="row align-items-center">
                 <div class="col-md-12  contact-item-md" style="height: 150px;">
                     <button type="button"
-                        class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK HERE TO
+                        class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK
+                            HERE TO
                             MAKE AN APPOINTMENT</strong></button>
                 </div>
             </div>
         </div>
     </section>
-    <script type="module" >  
-        $(document).ready(function () {
-            (function ($) {
+    <script type="module">
+        $(document).ready(function() {
+            (function($) {
                 $('.owl-carousel').owlCarousel({
-                    padding:5,
+                    padding: 5,
                     center: true,
-                    items:5,
-                    loop:true,
+                    items: 5,
+                    loop: true,
                     //autoplay:true,
-                    autoplayTimeout:2000,
-                    autoplayHoverPause:true,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
                     animateOut: 'fadeOut'
                 })
             })(jQuery);
@@ -197,4 +198,3 @@
     </script>
     @include('layouts.footers.footer')
 @endsection
-
