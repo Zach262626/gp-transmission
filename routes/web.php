@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('widgets.google_review');
+    return view('layouts.footers.footer');
 });
