@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'MainPage'])  {{--**IMPORTANT TO ADD activePage for styling**--}}
+@extends('layouts.app', ['activePage' => 'MainPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 @include('layouts.navbars.nav_top')
 
 @section('content')
@@ -13,9 +13,9 @@
                 </div>
             </div>
             <div class="section_content row mt-5">
-                <div class="col-12">
-                    <button type="button"class="btn border border-light border-2 shadow-lg h-100 fs-2 rounded-pill appointment-button">
-                        <strong>BOOK HERE</strong>
+                <div class="col-12 mt-5">
+                    <button type="button"class="btn shadow-lg h-100 fs-2 rounded appointment-button">
+                        <strong>BOOK AN APPOINTMENT HERE</strong>
                     </button>
                 </div>
             </div>
@@ -141,23 +141,23 @@
                         </div>
                         <div class="row">
                             <div class="col text-end">MONDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">TUESDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">WEDNESDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">THURSDAY</div>
-                            <div class="col">8:00-17:00</div>
+                            <div class="col">7:00-17:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">FRIDAY</div>
-                            <div class="col">8:00-12:00</div>
+                            <div class="col">7:00-12:00</div>
                         </div>
                         <div class="row">
                             <div class="col text-end">SATURDAY</div>
@@ -173,23 +173,24 @@
             <div class="row align-items-center">
                 <div class="col-md-12  contact-item-md" style="height: 150px;">
                     <button type="button"
-                        class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK HERE TO
+                        class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK
+                            HERE TO
                             MAKE AN APPOINTMENT</strong></button>
                 </div>
             </div>
         </div>
     </section>
-    <script type="module" >  
-        $(document).ready(function () {
-            (function ($) {
+    <script type="module">
+        $(document).ready(function() {
+            (function($) {
                 $('.owl-carousel').owlCarousel({
-                    padding:5,
+                    padding: 5,
                     center: true,
-                    items:5,
-                    loop:true,
+                    items: 5,
+                    loop: true,
                     //autoplay:true,
-                    autoplayTimeout:2000,
-                    autoplayHoverPause:true,
+                    autoplayTimeout: 2000,
+                    autoplayHoverPause: true,
                     animateOut: 'fadeOut'
                 })
             })(jQuery);
@@ -197,4 +198,3 @@
     </script>
     @include('layouts.footers.footer')
 @endsection
-
