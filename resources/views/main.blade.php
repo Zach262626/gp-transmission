@@ -3,7 +3,7 @@
 
 @section('content')
     <section id="Header">
-        <img class="header_bg" src="./img/car-wallpaper.jpg" alt="car-wallpaper.jpg">
+        <img class="header_bg" src="./img/cards/gptransmission.png" alt="car-wallpaper.jpg">
         <div class="container">
             <div class="section_content row">
                 <div class="col-12">
@@ -25,52 +25,53 @@
         <div class="container mt-4">
             <div class="row align-items-center">
                 <div class="col-md-5 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-3">
-                        <h2 class="main-item-header">TIRES</h2>
-                        <div class="main-item-description">Preventative maintenance to keep your car moving, and repairs for when it is too late</div>
+                    <div class="main-item-md shadow-lg" id="main-item-1">
+                        <h2 class="main-item-header fs-1" style="z-index:11; position: relative;">TIRES</h2>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/tire.png" alt="tire.png"></div>
                     </div>
                 </div>
                 <div class="col-md-7 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-4">
+                    <div class="main-item-md shadow-lg" id="main-item-2">
                         <h2 class="main-item-header">TRANSMISSIONS</h2>
-                        <div class="main-item-description">Preventative maintenance to keep your car moving, and repairs for when it is too late</div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car.png" alt="tire.png"></div>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center">
                 <div class="col-md-4 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-5">
-                        <h2 class="main-item-header">AIR
-                            CONDITIONING</h2>
-                        <div class="main-item-description">Keep yourself cool and comfortable while driving in Ottawa's hot and humid summers</div>
+                    <div class="main-item-md shadow-lg" id="main-item-3">
+                        <h2 class="main-item-header">CAR INSPECTION</h2>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/key.png" alt="tire.png"></div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-6">
+                    <div class="main-item-md shadow-lg" id="main-item-4">
                         <h2 class="main-item-header">OIL
                             CHANGES</h2>
-                        <div class="main-item-description">Everyone knows the importance of regular oil changes - Precision Auto Tech can even set up a schedule for you</div>
+                            <div class="main-item-description"><img class="header_bg" src="./img/cards/oil.png" alt="tire.png"></div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-7">
+                    <div class="main-item-md shadow-lg" id="main-item-5">
                         <h2 class="main-item-header">BRAKES</h2>
-                        <div class="main-item-description">Avoid potential brake failures - come in for a brake suspension and get peace of mind</div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/pedals.png" alt="tire.png"></div>
                     </div>
                 </div>
             </div>
             <div class="row align-items-center mb-5">
                 <div class="col-md-7 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-3">
+                    <div class="main-item-md shadow-lg" id="main-item-6">
                         <h2 class="main-item-header">TUNE
                             UPS</h2>
-                        <div class="main-item-description">Our technicians can spot small difficulties before they become expensive problems</div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car2.png" alt="tire.png"></div>
                     </div>
                 </div>
                 <div class="col-md-5 p-2">
-                    <div class="main-item-md shadow-lg" id="main-item-4">
-                        <h2 class="main-item-header">SUSPENSIONS</h2>
-                        <div class="main-item-description">We can help make your ride more comfortable with our expertise in suspension repairs</div>
+                    <div class="main-item-md shadow-lg" id="main-item-7">
+                        <h2 class="main-item-header">+ SUSPENSIONS</h2>
+                        <h2 class="main-item-header">+ AIR CONDITIONERS</h2>
+                        <h2 class="main-item-header">+ BATTERIES</h2>
+                        <h2 class="main-item-header">+ MORE</h2>
                     </div>
                 </div>
             </div>
