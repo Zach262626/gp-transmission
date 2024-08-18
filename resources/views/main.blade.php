@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="section_content row mt-5">
-                <div class="col-12 mt-5">
+                <div class="col-12">
                     <button type="button"class="btn shadow-lg h-100 fs-2 rounded appointment-button">
                         <strong>BOOK AN APPOINTMENT HERE</strong>
                     </button>
@@ -120,7 +120,7 @@
                         <div class="fs-2">
                             <strong>HOW TO REACH US</strong>
                         </div>
-                        <div>Phone: 999-777-1231</div>
+                        <div>Phone: 506-790-7776</div>
                         <div class="border-middle pb-2">e-mail: sebgallant@hotmail.com</div>
                         <div class="fs-2">
                             <strong>Location</strong>
