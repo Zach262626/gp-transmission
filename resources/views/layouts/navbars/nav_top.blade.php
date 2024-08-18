@@ -16,6 +16,21 @@
             text-decoration: none;
         }
 
+        .btn-nav-top {
+            transition: ease 500ms;
+            text-decoration: none;
+            color: #2F64AE;
+        }
+        .btn-nav-top:hover {
+            transition: ease 500ms;
+            color: #D9D9D9;
+        }
+        .btn-nav-top:active {
+            transition: ease 500ms;
+            color: #2F64AE;
+        }
+
+
         .navbar-nav .nav-link.active,
         .navbar-nav .nav-link:hover {
             color: black;
@@ -35,7 +50,7 @@
         <div class="collapse navbar-collapse" id="navbarScroll1">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item mx-2 my-1">
-                    <a class=" btn btn-outline-secondary fs-5" href="#">Contact Us</a>
+                    <a class="fs-5 btn-nav-top" href="#">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -56,7 +71,7 @@
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Home</a>
                 </li>
-                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                <li class="ml-2" >
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Contact Us</a>
                 </li>
                 {{-- ADD APPOINTMENT --}}
