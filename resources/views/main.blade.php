@@ -12,13 +12,14 @@
                     <h2 class="header_content-description">EAST COAST</h2>
                 </div>
             </div>
-            <div class="section_content row mt-5">
+            {{-- ADD APPOINTMENT --}}
+            {{-- <div class="section_content row mt-5">
                 <div class="col-12">
                     <button type="button"class="btn shadow-lg h-100 fs-2 rounded appointment-button">
                         <strong>BOOK AN APPOINTMENT HERE</strong>
                     </button>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <section id="Main">
@@ -167,14 +168,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center">
+            {{-- ADD APPOINTMENT --}}
+            {{-- <div class="row align-items-center">
                 <div class="col-md-12  contact-item-md" style="height: 150px;">
                     <button type="button"
                         class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK
                             HERE TO
                             MAKE AN APPOINTMENT</strong></button>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <script type="module">

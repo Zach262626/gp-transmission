@@ -59,9 +59,10 @@
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Contact Us</a>
                 </li>
-                <li class="ml-2">
+                {{-- ADD APPOINTMENT --}}
+                {{-- <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Make an Appointment</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>
