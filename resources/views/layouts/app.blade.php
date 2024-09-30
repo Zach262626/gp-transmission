@@ -8,6 +8,9 @@
     {{-- Owl Carousel Styles --}}
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    
+
+    <link rel="shortcut icon" href="./favicon.ico">
     {{-- Jquery --}}
     <script
 			  src="https://code.jquery.com/jquery-3.7.1.js"
