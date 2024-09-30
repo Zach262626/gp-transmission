@@ -2,7 +2,9 @@
     <style>
         /* secondary: #2F64AE */
         /* Light: #D9D9D9 */
-
+        .hide {
+            visibility: hidden;
+        }
         .navbar-scrolldown {
             transform: translate(0, -150px);
             transition: ease 500ms;
@@ -38,7 +40,7 @@
     </style>
 @endsection
 {{-- To make nav bar remove fixed-top --}}
-<nav class="navbar fixed-top navbar-expand-lg navbar-light  pt-2 " id="Navbar1">
+<nav class="navbar navbar-expand-lg navbar-light pt-2" id="Navbar1">
     <div class="container d-flex border-bottom border-2 border-secondary align-middle">
         <a class="navbar-brand" href="#">
             <img src="./img/Header.png" alt="" height="75">
@@ -56,8 +58,8 @@
         </div>
     </div>
 </nav>
-<nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2 navbar-scrolldown" id="Navbar2"
-    style="background-color:#d9d9d9ee;">
+<nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2" id="Navbar2" 
+    style="background-color:#d9d9d9ee; visibility: hidden">
     <div class="container px-3">
         <a class="navbar-brand" href="#">
             <img src="./img/Header.png" alt="" height="50">
@@ -82,6 +84,7 @@
         </div>
     </div>
 </nav>
+
 {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar scroll</a>
@@ -120,33 +123,49 @@
   </nav> --}}
 @section('js')
     <script type="module">
-        $(document).scrollTop(0);
+        // $(document).scrollTop(0);
         const navbar1 = document.querySelector("#Navbar1");
-        document.addEventListener("scroll",
-            () => {
-                if (1 < window.scrollY) {
-                    navbar1.classList.add("navbar-scrolldown");
-                    navbar1.classList.remove("navbar-scrollup");
-                } else {
-                    navbar1.classList.add("navbar-scrollup");
-                    navbar1.classList.remove("navbar-scrolldown");
-                }
-            }
-        )
         const navbar2 = document.querySelector("#Navbar2");
-        document.addEventListener("scroll",
-            () => {
-                if (1 < window.scrollY) {
-                    navbar2.classList.remove("navbar-scrolldown");
-                    navbar2.classList.add("navbar-scrollup");
-                } else {
-                    navbar2.classList.remove("navbar-scrollup");
-                    navbar2.classList.add("navbar-scrolldown");
-                }
-            }
-        )
-        // function startNav() {
-        //     if (window.innerHeight)
-        // }
+        // document.addEventListener("scroll",
+        //     () => {
+        //         if (1 < window.scrollY) {
+        //             navbar1.classList.add("navbar-scrolldown");
+        //             navbar1.classList.remove("navbar-scrollup");
+        //             navbar2.classList.remove("navbar-scrolldown");
+        //             navbar2.classList.add("navbar-scrollup");
+        //         } else {
+        //             navbar1.classList.add("navbar-scrollup");
+        //             navbar1.classList.remove("navbar-scrolldown");
+        //             navbar2.classList.remove("navbar-scrollup");
+        //             navbar2.classList.add("navbar-scrolldown");
+        //         }
+        //     }
+        // )
+        // const nav = document.getElementById('mynav');
+        const navHeight = navbar2.getBoundingClientRect().height;
+        var newPage = false;
+        function updateNavColor(entries) {
+        const [entry] = entries;
+        if(!entry.isIntersecting) {
+            if (!newPage) {
+                navbar2.style.visibility = "visible";
+                newPage = true;
+            };
+            navbar2.classList.remove("navbar-scrolldown");
+            navbar2.classList.add("navbar-scrollup");
+        } else {
+            navbar2.classList.remove("navbar-scrollup");
+            navbar2.classList.add("navbar-scrolldown");
+        }
+        
+        }
+
+        const headerObserver = new IntersectionObserver(updateNavColor, {
+        root: null,
+        threshold: 0,
+        rootMargin: `-${navHeight}px`
+        });
+
+        headerObserver.observe(navbar1)
     </script>
 @endsection

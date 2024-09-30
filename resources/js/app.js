@@ -1,5 +1,3 @@
-import jQuery from "jquery";
-window.$ = jQuery;
 
 //import './main.js'
 
