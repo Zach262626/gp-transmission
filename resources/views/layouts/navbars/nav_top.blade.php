@@ -5,6 +5,7 @@
         .hide {
             visibility: hidden;
         }
+
         .navbar-scrolldown {
             transform: translate(0, -150px);
             transition: ease 500ms;
@@ -23,10 +24,12 @@
             text-decoration: none;
             color: #2F64AE;
         }
+
         .btn-nav-top:hover {
             transition: ease 500ms;
             color: #D9D9D9;
         }
+
         .btn-nav-top:active {
             transition: ease 500ms;
             color: #2F64AE;
@@ -40,9 +43,9 @@
     </style>
 @endsection
 {{-- To make nav bar remove fixed-top --}}
-<nav class="navbar navbar-expand-lg navbar-light pt-2" id="Navbar1">
-    <div class="container d-flex border-bottom border-2 border-secondary align-middle">
-        <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-lg navbar-light pt-2 d-none d-md-block" id="Navbar1">
+    <div class="container d-flex border-bottom border-2 border-secondary align-middle ">
+        <a class="navbar-brand d-none d-md-block" href="#">
             <img src="./img/Header.png" alt="" height="75">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll1"
@@ -58,7 +61,7 @@
         </div>
     </div>
 </nav>
-<nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2" id="Navbar2" 
+<nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2" id="Navbar2"
     style="background-color:#d9d9d9ee; visibility: hidden">
     <div class="container px-3">
         <a class="navbar-brand" href="#">
@@ -73,7 +76,7 @@
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Home</a>
                 </li>
-                <li class="ml-2" >
+                <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Contact Us</a>
                 </li>
                 {{-- ADD APPOINTMENT --}}
@@ -144,26 +147,27 @@
         // const nav = document.getElementById('mynav');
         const navHeight = navbar2.getBoundingClientRect().height;
         var newPage = false;
+
         function updateNavColor(entries) {
-        const [entry] = entries;
-        if(!entry.isIntersecting) {
-            if (!newPage) {
-                navbar2.style.visibility = "visible";
-                newPage = true;
-            };
-            navbar2.classList.remove("navbar-scrolldown");
-            navbar2.classList.add("navbar-scrollup");
-        } else {
-            navbar2.classList.remove("navbar-scrollup");
-            navbar2.classList.add("navbar-scrolldown");
-        }
-        
+            const [entry] = entries;
+            if (!entry.isIntersecting) {
+                if (!newPage) {
+                    navbar2.style.visibility = "visible";
+                    newPage = true;
+                };
+                navbar2.classList.remove("navbar-scrolldown");
+                navbar2.classList.add("navbar-scrollup");
+            } else {
+                navbar2.classList.remove("navbar-scrollup");
+                navbar2.classList.add("navbar-scrolldown");
+            }
+
         }
 
         const headerObserver = new IntersectionObserver(updateNavColor, {
-        root: null,
-        threshold: 0,
-        rootMargin: `-${navHeight}px`
+            root: null,
+            threshold: 0,
+            rootMargin: `-${navHeight}px`
         });
 
         headerObserver.observe(navbar1)
