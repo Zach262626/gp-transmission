@@ -22,7 +22,7 @@
             </div> --}}
         </div>
     </section>
-    <section id="Main">
+    <section id="Main" class="d-none d-md-block">
         <div class="container mt-4">
             <div class="row align-items-center">
                 <div class="col-md-5 p-2">
