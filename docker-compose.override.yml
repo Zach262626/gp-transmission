@@ -1,0 +1,9 @@
+services:
+  phpmyadmin:
+   image: 'phpmyadmin:latest'
+   ports:
+      - '${FORWARD_PMA_PORT:-8080}:80'
+   networks:
+      - sail
+   environment:
+      - PMA_ARBITRARY=1
