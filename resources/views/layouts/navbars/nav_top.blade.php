@@ -57,6 +57,9 @@
                 <li class="nav-item mx-2 my-1">
                     <a class="fs-5 btn-nav-top" href="#">Contact Us</a>
                 </li>
+                <li class="nav-item mx-2 my-1 ml-4" >
+                    <a class="fs-5 btn-nav-top" href="/telescope">telescope</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -75,6 +78,9 @@
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Home</a>
+                </li>
+                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                    <a class="nav-link btn-nav mx-2 my-1" href="/telescope">telescope</a>
                 </li>
                 <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Contact Us</a>
