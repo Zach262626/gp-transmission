@@ -48,6 +48,23 @@
         <a class="navbar-brand d-none d-md-block" href="#">
             <img src="./img/Header.png" alt="" height="75">
         </a>
+        @if ($type == "login")
+        <div class="collapse navbar-collapse" id="navbarScroll1">
+            <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item mx-2 my-1">
+                    <a class="fs-5 btn-nav-top" href="/signin">Sign In</a>
+                </li>
+            </ul>
+        </div>
+        @elseif ($type == "signin")
+        <div class="collapse navbar-collapse" id="navbarScroll1">
+            <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item mx-2 my-1">
+                    <a class="fs-5 btn-nav-top" href="/login">Login In</a>
+                </li>
+            </ul>
+        </div>
+        @else
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll1"
             aria-controls="navbarScroll1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -62,6 +79,7 @@
                 </li>
             </ul>
         </div>
+        @endif
     </div>
 </nav>
 <nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2" id="Navbar2"
@@ -74,6 +92,23 @@
             aria-controls="navbarScroll2" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        @if ($type == "login")
+        <div class="collapse navbar-collapse" id="navbarScroll2">
+            <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                    <a class="nav-link btn-nav mx-2 my-1" href="/signin">Sigin</a>
+                </li>
+            </ul>
+        </div>   
+        @elseif ($type == "signin")
+        <div class="collapse navbar-collapse" id="navbarScroll2">
+            <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                    <a class="nav-link btn-nav mx-2 my-1" href="/login">Login</a>
+                </li>
+            </ul>
+        </div>  
+        @else
         <div class="collapse navbar-collapse" id="navbarScroll2">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
@@ -91,6 +126,8 @@
                 </li> --}}
             </ul>
         </div>
+        @endif
+       
     </div>
 </nav>
 

@@ -1,5 +1,5 @@
 @extends('layouts.app', ['activePage' => 'MainPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
-@include('layouts.navbars.nav_top', ['headerId' => 'Header'])
+@include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'main'])
 
 @section('content')
     <section id="Header">
