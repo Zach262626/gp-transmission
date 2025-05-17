@@ -72,7 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarScroll1">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item mx-2 my-1">
-                    <a class="fs-5 btn-nav-top" href="#">Contact Us</a>
+                    <a class="fs-5 btn-nav-top" href="/contact">Contact Us</a>
                 </li>
                 @auth
                 <li class="nav-item mx-2 my-1 ml-4" >
@@ -93,7 +93,7 @@
 <nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2" id="Navbar2"
     style="background-color:#d9d9d9ee; visibility: hidden">
     <div class="container px-3">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="./img/Header.png" alt="" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll2"
@@ -120,7 +120,7 @@
         <div class="collapse navbar-collapse" id="navbarScroll2">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
-                    <a class="nav-link btn-nav mx-2 my-1" href="#">Home</a>
+                    <a class="nav-link btn-nav mx-2 my-1" href="/">Home</a>
                 </li>
                 @auth
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
@@ -134,7 +134,7 @@
                 </li>
                 @endauth
                 <li class="ml-2">
-                    <a class="nav-link btn-nav mx-2 my-1" href="#">Contact Us</a>
+                    <a class="nav-link btn-nav mx-2 my-1" href="/contact">Contact Us</a>
                 </li>
                 
                 {{-- ADD APPOINTMENT --}}
