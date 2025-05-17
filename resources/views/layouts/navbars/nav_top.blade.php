@@ -45,7 +45,7 @@
 {{-- To make nav bar remove fixed-top --}}
 <nav class="navbar navbar-expand-lg navbar-light pt-2 d-none d-md-block" id="Navbar1">
     <div class="container d-flex border-bottom border-2 border-secondary align-middle ">
-        <a class="navbar-brand d-none d-md-block" href="#">
+        <a class="navbar-brand d-none d-md-block" href="/">
             <img src="./img/Header.png" alt="" height="75">
         </a>
         @if ($type == "login")
@@ -148,63 +148,11 @@
     </div>
 </nav>
 
-{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar scroll</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav> --}}
 @section('js')
     <script type="module">
         // $(document).scrollTop(0);
         const navbar1 = document.querySelector("#Navbar1");
         const navbar2 = document.querySelector("#Navbar2");
-        // document.addEventListener("scroll",
-        //     () => {
-        //         if (1 < window.scrollY) {
-        //             navbar1.classList.add("navbar-scrolldown");
-        //             navbar1.classList.remove("navbar-scrollup");
-        //             navbar2.classList.remove("navbar-scrolldown");
-        //             navbar2.classList.add("navbar-scrollup");
-        //         } else {
-        //             navbar1.classList.add("navbar-scrollup");
-        //             navbar1.classList.remove("navbar-scrolldown");
-        //             navbar2.classList.remove("navbar-scrollup");
-        //             navbar2.classList.add("navbar-scrolldown");
-        //         }
-        //     }
-        // )
-        // const nav = document.getElementById('mynav');
         const navHeight = navbar2.getBoundingClientRect().height;
         var newPage = false;
 

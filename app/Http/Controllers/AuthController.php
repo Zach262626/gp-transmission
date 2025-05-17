@@ -30,7 +30,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->intended('/');
+        return redirect()->route('main');
     }
 
     // Show login form (if you have a view)
@@ -62,6 +62,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->to('main');
+        return redirect()->route('main');
     }
 }

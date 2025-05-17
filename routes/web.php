@@ -17,4 +17,4 @@ Route::get('/signin', [AuthController::class, 'showRegister']);
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::post('/signin', [AuthController::class, 'register'])->name('signin');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth:sanctum');;
