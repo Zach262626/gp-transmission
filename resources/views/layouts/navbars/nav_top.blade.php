@@ -74,9 +74,17 @@
                 <li class="nav-item mx-2 my-1">
                     <a class="fs-5 btn-nav-top" href="#">Contact Us</a>
                 </li>
+                @auth
                 <li class="nav-item mx-2 my-1 ml-4" >
                     <a class="fs-5 btn-nav-top" href="/telescope">telescope</a>
                 </li>
+                <li class="nav-item mx-2 my-1 ml-4" >
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="fs-6 btn btn-primary">Logout</button>
+                    </form>
+                </li>
+                @endauth
             </ul>
         </div>
         @endif
@@ -114,12 +122,21 @@
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Home</a>
                 </li>
+                @auth
                 <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="/telescope">telescope</a>
                 </li>
+                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="nav-link btn-nav mx-2 my-1">Logout</button>
+                    </form>
+                </li>
+                @endauth
                 <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Contact Us</a>
                 </li>
+                
                 {{-- ADD APPOINTMENT --}}
                 {{-- <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Make an Appointment</a>
