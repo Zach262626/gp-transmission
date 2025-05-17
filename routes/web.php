@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\EnsureTokenIsValid;
 
 Route::view('/', 'main')->name('main');
+Route::view('/contact', 'contact')->name('contact');
 
 
 Route::get('/login', function () {

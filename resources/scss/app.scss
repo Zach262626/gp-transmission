@@ -17,9 +17,15 @@ $enable-transitions: "true";
 
 $enable-shadows: "true";
 
+// 1. Set the typed text color to a near-white
+$input-color: $light;                       // very pale gray/white :contentReference[oaicite:0]{index=0}
+
+// 2. Set placeholder to same hue at 60% opacity
+$input-placeholder-color: rgba(#d9d9d9, 0.3);
 /* bootstrap */
 @import 'bootstrap/scss/bootstrap';
 // @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 /* CUSTOM SCSS */
 //main.scss
+
 @import "./pages/main.scss";
