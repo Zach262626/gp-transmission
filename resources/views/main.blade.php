@@ -1,5 +1,5 @@
 @extends('layouts.app', ['activePage' => 'MainPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
-@include('layouts.navbars.nav_top', ['headerId' => 'Header'])
+@include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'main'])
 
 @section('content')
     <section id="Header">
@@ -22,7 +22,7 @@
             </div> --}}
         </div>
     </section>
-    <section id="Main">
+    <section id="Main" class="d-none d-md-block">
         <div class="container mt-4">
             <div class="row align-items-center">
                 <div class="col-md-5 p-2">
@@ -41,7 +41,7 @@
             <div class="row align-items-center">
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-3">
-                        <h2 class="main-item-header">CAR INSPECTION</h2>
+                        <h2 class="main-item-header">MOTOR VEHICLE INSPECTION</h2>
                         <div class="main-item-description"><img class="header_bg" src="./img/cards/key.png" alt="tire.png"></div>
                     </div>
                 </div>
@@ -69,8 +69,8 @@
                 </div>
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-7">
-                        <h2 class="main-item-header">+ SUSPENSIONS</h2>
-                        <h2 class="main-item-header">+ AIR CONDITIONERS</h2>
+                        <h2 class="main-item-header">+ SUSPENSION</h2>
+                        <h2 class="main-item-header">+ AIR CONDITIONER</h2>
                         <h2 class="main-item-header">+ BATTERIES</h2>
                         <h2 class="main-item-header">+ MORE</h2>
                     </div>
