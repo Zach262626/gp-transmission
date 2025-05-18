@@ -54,8 +54,11 @@
 <nav class="navbar shadow-lg navbar-expand-lg fixed-top navbar-light pt-2" id="Navbar2"
     style="background-color:#d9d9d9ee; visibility: hidden">
     <div class="container px-3">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand d-none d-md-block" href="/">
             <img src="./img/Header.png" alt="" height="50">
+        </a>
+        <a class="navbar-brand d-block d-md-none" href="/">
+            <img src="./img/Header.png" alt="" height="25">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll2"
             aria-controls="navbarScroll2" aria-expanded="false" aria-label="Toggle navigation">
