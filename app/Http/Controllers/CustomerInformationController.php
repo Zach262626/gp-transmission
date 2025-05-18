@@ -26,7 +26,7 @@ class CustomerInformationController extends Controller
             'complaint'      => 'required|string',
         ]);
         $customer_info = CustomerInformation::create($request->all());
-        Mail::to('zachgallant26@gmail.com')->cc('sebgallant@hotmail.com')->send(new CustomerInformationMail($customer_info));
+        Mail::to('sebgallant@hotmail.com')->cc('hatrickzach@gmail.com')->send(new CustomerInformationMail($customer_info));
         return redirect()->route('main');
     }
     public function mailExample()

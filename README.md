@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="public/img/Logo-800p-sameCrlor.png" ></a></p>
 
 
 ## How to install Project
@@ -8,8 +8,5 @@
 * run npm install and composer install
 * run npm run build
 * run the migration table
-* To start the server run npm run dev and virtual on 
-
-
-reminder:
-For form: php artisan make:component Forms/Appointment
+* install wsl and docker
+* runn sail up -d
