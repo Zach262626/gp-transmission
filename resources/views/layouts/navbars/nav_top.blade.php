@@ -26,7 +26,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll1">
-                <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll text-secondary" style="--bs-scroll-height: 100px;">
                     @if ($type != 'contact')
                         <li class="nav-item mx-2 my-1">
                             <a class="fs-5 btn-nav-top" href="/contact">Service Request</a>
