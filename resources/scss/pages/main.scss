@@ -8,12 +8,13 @@ $text-shadow: 0 1rem 3rem $dark;
 // }
 #ContactPage {
 
-  @media (max-width: 768px) {
-    container {
-        margin-top: 600px;
-    } 
-  }
+    // @media (max-width: 768px) {
+    //     container {
+    //         margin-top: 600px;
+    //     }
+    // }
 }
+
 #MainPage {
 
     body,
@@ -192,6 +193,7 @@ $text-shadow: 0 1rem 3rem $dark;
         position: relative;
         //background-color: rgb(235, 235, 235);
         background-color: rgb(235, 235, 235);
+
         @media (max-width: 768px) {
             .contact-item-md {
                 margin-top: 20px;
@@ -267,5 +269,99 @@ $text-shadow: 0 1rem 3rem $dark;
             transform: translate(0, -10px);
         }
 
+    }
+}
+
+#Navbar1,
+#Navbar2 {
+    // NAV
+    transition: transform 0.5s ease;
+
+
+    @media (min-width: 768px) {
+        .nav-style-li {
+            border-left: 1px solid rgba(0, 0, 0, 0.65);
+        }
+    }
+
+    .btn-nav {
+        text-decoration: none;
+    }
+
+    .btn-nav-top {
+        transition: ease 500ms;
+        text-decoration: none;
+        color: #2F64AE;
+    }
+
+    .btn-nav-top:hover {
+        transition: ease 500ms;
+        color: #D9D9D9;
+    }
+
+    .btn-nav-top:active {
+        transition: ease 500ms;
+        color: #2F64AE;
+    }
+
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+        color: black;
+    }
+}
+
+/* 2) Scrolled down: slide up */
+.navbar-scrolldown {
+    transform: translateY(-150px);
+}
+
+/* 3) At top: reset back to original */
+.navbar-scrollup {
+    transform: translateY(0);
+}
+
+/* 4) Utility: hide via visibility if you still need it */
+.hide {
+    visibility: hidden;
+}
+
+#Footer {
+    #Footer {
+        height: 150px;
+        background-color: #000C21;
+        color: #bbbbbb;
+        /*$dark */
+    }
+
+    .company-copy {
+        align-content: center;
+        color: #bbbbbb;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .company-copy:hover {
+        color: white;
+    }
+
+    .company-copy:active {
+        color: rgb(122, 119, 119);
+    }
+
+    .social-media {
+        padding-left: 5px;
+        align-content: center;
+        color: #bbbbbb;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .social-media:hover {
+        color: white;
+    }
+
+    .social-media:active {
+        color: rgb(122, 119, 119);
     }
 }

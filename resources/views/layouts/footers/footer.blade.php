@@ -1,39 +1,7 @@
-<style>
-    #Footer {
-        height: 150px;
-        background-color: #000C21;
-        color: #bbbbbb;
-        /*$dark */
-    }
-    .company-copy {
-        align-content: center;
-        color: #bbbbbb;
-        text-decoration: none;
-        transition: all 0.3s;
-    }
-    .company-copy:hover {
-        color: white;
-    }
-    .company-copy:active {
-        color: rgb(122, 119, 119);
-    }
-    .social-media {
-        padding-left: 5px;
-        align-content: center;
-        color: #bbbbbb;
-        text-decoration: none;
-        transition: all 0.3s;
-    }
-    .social-media:hover {
-        color: white;
-    }
-    .social-media:active {
-        color: rgb(122, 119, 119);
-    }
-</style>
 
-<section id="Footer" class="" style="height: 75px; align-content:center;">
-    <div class="container">
+
+<div id="Footer" class="" style="height: 75px; align-content:center;">
+    <div class="container text-light">
         <div class="row">
             <div class="col-lg-6 text-lg-start text-center">
                 © 2025 <a href="https://g.co/kgs/itpTF2k" class="company-copy">GP Transmission & Auto repair Inc.</a> All rights reserved.
@@ -54,4 +22,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

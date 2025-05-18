@@ -1,5 +1,4 @@
-@extends('layouts.app', ['activePage' => 'ContactPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
-@include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'contact'])
+@extends('layouts.app', ['activePage' => 'ContactPage', 'type' => 'contact']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 @section('content')
   <div class="container mt-5 text-light">
     <h2 class="mb-4">Customer Information Form</h2>
@@ -98,5 +97,4 @@
     </div>
     </form>
   </div>
-  @include('layouts.footers.footer')
 @endsection

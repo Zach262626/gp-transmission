@@ -1,8 +1,7 @@
-@extends('layouts.app', ['activePage' => 'MainPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
-@include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'main'])
+@extends('layouts.app', ['activePage' => 'MainPage', 'type' => 'main']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 
 @section('content')
-    <section id="Header">
+    <div id="Header">
         <img class="header_bg" src="./img/cards/gptransmission.png" alt="car-wallpaper.jpg">
         <div class="container">
             <div class="section_content row">
@@ -23,8 +22,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="Main" class="d-none d-md-block">
+    </div>
+    <div id="Main" class="d-none d-md-block">
         <div class="container mt-4">
             <div class="row align-items-center">
                 <div class="col-md-5 p-2">
@@ -86,8 +85,8 @@
             </div>
         </div>
 
-    </section>
-    {{-- <section id="Review">
+    </div>
+    {{-- <div id="Review">
         <div class="owl-carousel">
             <div class="item">
                 <div class="container border border-2 border-dark h-100">
@@ -128,8 +127,8 @@
                 <h4>12</h4>
             </div>
         </div>
-    </section> --}}
-    <section id="Contact">
+    </div> --}}
+    <div id="Contact">
         <div class="container my-5">
             <div class="row align-items-center">
                 <div class="col-md-12 contact-item-md contact-map">
@@ -143,6 +142,25 @@
             </div>
 
             <div class="row align-items-center">
+                <div class="col-md-6 contact-item-md d-block d-md-none">
+                    <div class="business shadow-lg container h-100">
+                        <div class="fs-2 text-center border-bottom">
+                            <strong>Services</strong>
+                        </div>
+                        <ul class="">
+                            <li>Transmissions</li>
+                            <li>Tires</li>
+                            <li>MVI</li>
+                            <li>Oil Changes</li>
+                            <li>Brakes</li>
+                            <li>Tune ups</li>
+                            <li>Suspensions</li>
+                            <li>Air Conditioner</li>
+                            <li>Batteries</li>
+                            <li>And More</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="col-md-6 contact-item-md">
                     <div class="reach-us shadow-lg border border-black border-1 container h-100">
                         <div class="fs-2">
@@ -208,7 +226,7 @@
                 </div>
             </div> --}}
         </div>
-    </section>
+    </div>
     <script type="module">
         $(document).ready(function () {
             (function ($) {
@@ -225,5 +243,4 @@
             })(jQuery);
         });
     </script>
-    @include('layouts.footers.footer')
 @endsection
