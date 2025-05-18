@@ -2,7 +2,7 @@
 @include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'main'])
 @section('content')
   <div class="container mt-5 text-light">
-    <h2 class="mb-4">Car Repair Service Request</h2>
+    <h2 class="mb-4">Customer Information Form</h2>
     <form novalidate>
       <div class="row g-3">
         <!-- Personal Info -->
