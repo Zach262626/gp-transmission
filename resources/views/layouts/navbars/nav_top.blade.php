@@ -71,9 +71,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll1">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                @if ($type != 'contact')
                 <li class="nav-item mx-2 my-1">
                     <a class="fs-5 btn-nav-top" href="/contact">Service Request</a>
                 </li>
+                @endif
                 @auth
                 <li class="nav-item mx-2 my-1 ml-4" >
                     <a class="fs-5 btn-nav-top" href="/telescope">telescope</a>
@@ -119,24 +121,25 @@
         @else
         <div class="collapse navbar-collapse" id="navbarScroll2">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="/">Home</a>
                 </li>
                 @auth
-                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                <li class="ml-2" style="border-left:1px solid rgba(0, 0, 0, 0.65)">
                     <a class="nav-link btn-nav mx-2 my-1" href="/telescope">telescope</a>
                 </li>
-                <li class="ml-2" style="border-right:1px solid rgba(0, 0, 0, 0.65)">
+                <li class="ml-2" style="border-left:1px solid rgba(0, 0, 0, 0.65)">
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
                         <button type="submit" class="nav-link btn-nav mx-2 my-1">Logout</button>
                     </form>
                 </li>
                 @endauth
+                @if($type!='contact')
                 <li class="ml-2">
-                    <a class="nav-link btn-nav mx-2 my-1" href="/contact">Service Request</a>
+                    <a class="nav-link btn-nav mx-2 my-1" style="border-left:1px solid rgba(0, 0, 0, 0.65)" href="/contact">Service Request</a>
                 </li>
-                
+                @endif
                 {{-- ADD APPOINTMENT --}}
                 {{-- <li class="ml-2">
                     <a class="nav-link btn-nav mx-2 my-1" href="#">Make an Appointment</a>

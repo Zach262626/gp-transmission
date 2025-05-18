@@ -1,5 +1,5 @@
 @extends('layouts.app', ['activePage' => 'ContactPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
-@include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'main'])
+@include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'contact'])
 @section('content')
   <div class="container mt-5 text-light">
     <h2 class="mb-4">Customer Information Form</h2>

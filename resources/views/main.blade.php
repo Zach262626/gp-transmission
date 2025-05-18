@@ -13,13 +13,15 @@
                 </div>
             </div>
             {{-- ADD APPOINTMENT --}}
-            {{-- <div class="section_content row mt-5">
+            <div class="section_content row mt-5">
                 <div class="col-12">
-                    <button type="button"class="btn shadow-lg h-100 fs-2 rounded appointment-button">
-                        <strong>BOOK AN APPOINTMENT HERE</strong>
-                    </button>
+                    <form action="{{ route('contact') }}" method="get">
+                        <button type="submit" class="btn shadow-lg h-100 fs-2 rounded appointment-button">
+                            <strong>ENTER CUSTOMER INFORMATION HERE</strong>
+                        </button>
+                    </form>
                 </div>
-            </div> --}}
+            </div>
         </div>
     </section>
     <section id="Main" class="d-none d-md-block">
@@ -28,13 +30,15 @@
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-1">
                         <h2 class="main-item-header fs-1" style="z-index:11; position: relative;">TIRES</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/tire.png" alt="tire.png"></div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/tire.png" alt="tire.png">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-7 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-2">
                         <h2 class="main-item-header">TRANSMISSIONS</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car.png" alt="tire.png"></div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car.png" alt="tire.png">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,20 +46,23 @@
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-3">
                         <h2 class="main-item-header">MOTOR VEHICLE INSPECTION</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/key.png" alt="tire.png"></div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/key.png" alt="tire.png">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-4">
                         <h2 class="main-item-header">OIL
                             CHANGES</h2>
-                            <div class="main-item-description"><img class="header_bg" src="./img/cards/oil.png" alt="tire.png"></div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/oil.png" alt="tire.png">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-5">
                         <h2 class="main-item-header">BRAKES</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/pedals.png" alt="tire.png"></div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/pedals.png"
+                                alt="tire.png"></div>
                     </div>
                 </div>
             </div>
@@ -64,7 +71,8 @@
                     <div class="main-item-md shadow-lg" id="main-item-6">
                         <h2 class="main-item-header">TUNE
                             UPS</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car2.png" alt="tire.png"></div>
+                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car2.png" alt="tire.png">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-5 p-2">
@@ -86,17 +94,39 @@
                     @include('widgets.google_review')
                 </div>
             </div>
-            <div class="item"><h4>2</h4></div>
-            <div class="item"><h4>3</h4></div>
-            <div class="item"><h4>4</h4></div>
-            <div class="item"><h4>5</h4></div>
-            <div class="item"><h4>6</h4></div>
-            <div class="item"><h4>7</h4></div>
-            <div class="item"><h4>8</h4></div>
-            <div class="item"><h4>9</h4></div>
-            <div class="item"><h4>10</h4></div>
-            <div class="item"><h4>11</h4></div>
-            <div class="item"><h4>12</h4></div>
+            <div class="item">
+                <h4>2</h4>
+            </div>
+            <div class="item">
+                <h4>3</h4>
+            </div>
+            <div class="item">
+                <h4>4</h4>
+            </div>
+            <div class="item">
+                <h4>5</h4>
+            </div>
+            <div class="item">
+                <h4>6</h4>
+            </div>
+            <div class="item">
+                <h4>7</h4>
+            </div>
+            <div class="item">
+                <h4>8</h4>
+            </div>
+            <div class="item">
+                <h4>9</h4>
+            </div>
+            <div class="item">
+                <h4>10</h4>
+            </div>
+            <div class="item">
+                <h4>11</h4>
+            </div>
+            <div class="item">
+                <h4>12</h4>
+            </div>
         </div>
     </section> --}}
     <section id="Contact">
@@ -180,8 +210,8 @@
         </div>
     </section>
     <script type="module">
-        $(document).ready(function() {
-            (function($) {
+        $(document).ready(function () {
+            (function ($) {
                 $('.owl-carousel').owlCarousel({
                     padding: 5,
                     center: true,

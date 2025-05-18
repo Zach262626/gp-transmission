@@ -34,4 +34,8 @@ class CustomerInformationController extends Controller
         $data = CustomerInformation::where('id', 1)->first();
         return new CustomerInformationMail($data);
     }
+    public function complaints() {
+        $submissions = CustomerInformation::get()->all();
+        return view('complaint_list', ['submissions' => $submissions]);
+    }
 }

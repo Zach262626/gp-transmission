@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-        // Show registration form (if you have a view)
+    // Show registration form (if you have a view)
     public function showRegister()
     {
         return view('signin');
@@ -22,15 +22,19 @@ class AuthController extends Controller
             'email'    => 'required|email|unique:users',
             'password' => 'required|string|min:8',
         ]);
+        if ($request['email'] == 'zachgallant26@gmail.com' || $request['email'] == 'sebgallant@hotmail.com') {
+            $user = User::create([
+                'email'    => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
 
-        $user = User::create([
-            'email'    => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        Auth::login($user);
-
-        return redirect()->route('main');
+            Auth::login($user);
+            return redirect()->route('main');
+        } else {
+            return back()->withErrors([
+                'email' => 'email invalid.',
+            ]);
+        }
     }
 
     // Show login form (if you have a view)
@@ -59,7 +63,7 @@ class AuthController extends Controller
     // Handle logout
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::guard('web')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect()->route('main');
