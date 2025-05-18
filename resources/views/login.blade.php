@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'MainPage']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
+@extends('layouts.app', ['activePage' => 'MainPage', 'type' => 'login']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 @section('content')
 <style>
     /* secondary: #2F64AE */
@@ -8,8 +8,7 @@
     }
     
 </style>
-<section id="Header">
-    @include('layouts.navbars.nav_top', ['headerId' => 'Header', 'type' => 'login'])
+<div id="Main">
     <div class="container text-light w-75">
         <div class="fs-1 mb-5 border-bottom border-2 border-light text-center">
             Login
@@ -33,6 +32,5 @@
         <button type="submit" class="btn btn-light">Submit</button>
         </form>
     </div>
-    @include('layouts.footers.footer')
-</section>
+</div>
 @endsection

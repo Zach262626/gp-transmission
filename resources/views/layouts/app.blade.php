@@ -26,9 +26,11 @@
     <!-- Loader CSS only uses dark background -->
     @yield('header')
 </head>
-
 <body id="{{ $activePage }}">
+    @include('layouts.navbars.nav_top', ['headerId' => $headerId ?? 'Header', 'type' => $type ?? 'main'])
+
     @yield('content')
+    @include('layouts.footers.footer')
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
         </script>
