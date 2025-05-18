@@ -37,6 +37,9 @@
                             <a class="fs-5 btn-nav-top" href="/telescope">telescope</a>
                         </li>
                         <li class="nav-item mx-2 my-1 ml-4">
+                            <a class="fs-5 btn-nav-top" href="/complaints">complaints</a>
+                        </li>
+                        <li class="nav-item mx-2 my-1 ml-4">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
                                 <button type="submit" class="fs-6 btn btn-primary">Logout</button>
@@ -81,6 +84,9 @@
                         <a class="nav-link btn-nav mx-2 my-1" href="/">Home</a>
                     </li>
                     @auth
+                         <li class="ml-2 nav-style-li" >
+                            <a class="nav-link btn-nav mx-2 my-1" href="/complaints">complaints</a>
+                        </li>
                         <li class="ml-2 nav-style-li" >
                             <a class="nav-link btn-nav mx-2 my-1" href="/telescope">telescope</a>
                         </li>

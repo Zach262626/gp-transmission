@@ -81,7 +81,7 @@
     @enderror
       </div>
       <div class="col-12">
-      <label for="complaint" class="form-label">Complaint / Description of Issue</label>
+      <label for="complaint" class="form-label">Description of Issue</label>
       <textarea name="complaint" class="form-control" id="complaint" rows="4" placeholder="Describe the issue..."
         required></textarea>
       @error('complaint')
