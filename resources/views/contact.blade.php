@@ -59,10 +59,6 @@
           <input type="text" class="form-control" id="asset" placeholder="Asset #">
         </div>
         <div class="col-12">
-          <label for="invoice" class="form-label">Invoice Number</label>
-          <input type="text" class="form-control" id="invoice" placeholder="INV-000123">
-        </div>
-        <div class="col-12">
           <label for="complaint" class="form-label">Complaint / Description of Issue</label>
           <textarea class="form-control" id="complaint" rows="4" placeholder="Describe the issue..." required></textarea>
         </div>
