@@ -6,14 +6,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\EnsureTokenIsValid;
 
 Route::view('/', 'main')->name('main');
+Route::view('/testing', 'testing')->name('testing');
+
 
 Route::get('/mailable', function () {
     return new App\Mail\CustomerInformationMail([
         'example' => '',
     ]); 
 });
-
-
 Route::get('/login', function () {
     return view('login');
 });

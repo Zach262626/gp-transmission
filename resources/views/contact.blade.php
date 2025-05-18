@@ -87,7 +87,7 @@
       {{ $message }}
     @enderror
       </div>
-
+      
       <!-- Service Info -->
       <div class="col-12">
       <label for="asset" class="form-label">Asset Number</label>
@@ -104,6 +104,7 @@
       {{ $message }}
     @enderror
       </div>
+
 
       <!-- Submit -->
       <div class="col-12">
