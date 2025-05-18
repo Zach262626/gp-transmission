@@ -35,7 +35,7 @@ class CustomerInformationController extends Controller
         return new CustomerInformationMail($data);
     }
     public function complaints() {
-        $submissions = CustomerInformation::get()->all();
-        return view('complaint_list', ['submissions' => $submissions]);
+        $submissions = CustomerInformation::get()->sortBy('created_at')->all();
+        return view('complaint_list', ['submissions' => array_reverse($submissions, true)]);
     }
 }
