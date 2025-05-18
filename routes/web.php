@@ -1,12 +1,13 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CustomerInformationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\EnsureTokenIsValid;
 
 Route::view('/', 'main')->name('main');
-Route::view('/contact', 'contact')->name('contact');
 Route::view('/testing', 'testing')->name('testing');
+
 
 Route::get('/mailable', function () {
     return new App\Mail\CustomerInformationMail([
@@ -19,6 +20,10 @@ Route::get('/login', function () {
 Route::get('/signin', function () {
     return view('signin');
 });
+
+Route::view('/contact', 'contact')->name('contact');
+Route::post('/contact/create', [CustomerInformationController::class, 'create'])->name('customerInformationCreate');
+
 Route::get('/signin', [AuthController::class, 'showRegister']);
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::post('/signin', [AuthController::class, 'register'])->name('signin');
