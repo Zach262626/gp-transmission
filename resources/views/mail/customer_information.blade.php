@@ -22,12 +22,8 @@
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['email'] }}</td>
       </tr>
       <tr>
-        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Cell Phone:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['cell_phone'] }}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Home Phone:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['home_phone'] }}</td>
+        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Phone:</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['phone'] }}</td>
       </tr>
       <tr>
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Year:</td>

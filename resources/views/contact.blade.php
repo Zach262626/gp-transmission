@@ -1,7 +1,7 @@
 @extends('layouts.app', ['activePage' => 'ContactPage', 'type' => 'contact']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 @section('content')
-  <div class="container mt-5 text-light">
-    <h2 class="mb-4">Customer Information Form</h2>
+  <div class="container mt-5 text-light ">
+    <h2 class="mb-4 contact-form">Customer Information Form</h2>
     <form method="post" action="{{ route('customerInformationCreate') }}">
     @csrf
     <div class="row g-3">
