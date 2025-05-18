@@ -36,7 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 text-lg-start text-center">
-                © 2024 <a href="https://g.co/kgs/itpTF2k" class="company-copy">GP Transmission & Auto repair Inc.</a> All rights reserved.
+                © 2025 <a href="https://g.co/kgs/itpTF2k" class="company-copy">GP Transmission & Auto repair Inc.</a> All rights reserved.
             </div>
             <div class="col-lg-6 text-lg-end text-center">
                 <a href="https://www.facebook.com/SgAutoTransmission" class="social-media"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">

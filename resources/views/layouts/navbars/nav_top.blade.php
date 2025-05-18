@@ -72,7 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarScroll1">
             <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item mx-2 my-1">
-                    <a class="fs-5 btn-nav-top" href="/contact">Contact Us</a>
+                    <a class="fs-5 btn-nav-top" href="/contact">Service Request</a>
                 </li>
                 @auth
                 <li class="nav-item mx-2 my-1 ml-4" >
@@ -134,7 +134,7 @@
                 </li>
                 @endauth
                 <li class="ml-2">
-                    <a class="nav-link btn-nav mx-2 my-1" href="/contact">Contact Us</a>
+                    <a class="nav-link btn-nav mx-2 my-1" href="/contact">Service Request</a>
                 </li>
                 
                 {{-- ADD APPOINTMENT --}}

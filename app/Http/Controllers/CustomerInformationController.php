@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CustomerInformationMail;
 use App\Models\CustomerInformation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CustomerInformationController extends Controller
 {
@@ -11,21 +13,25 @@ class CustomerInformationController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'name'    => 'required|string',
-            'date'    => 'required|date',
-            'email'    => 'required|email',
-            'cell_phone'    => 'integer',
-            'home_phone'    => 'integer',
-            'year'    => 'required|integer',
-            'make'    => 'required|string',
-            'model'    => 'required|string',
-            'vin'    => 'required|string',
-            'license_plate'    => 'required|string',
-            'kilometres'    => 'required|integer',
-            'asset_number'    => 'required|integer',
-            'complaint'    => 'required|string',
+            'name'           => 'required|string',
+            'email'          => 'required|email',
+            'phone'          => 'required|integer',
+            'year'           => 'required|integer',
+            'make'           => 'required|string',
+            'model'          => 'required|string',
+            'vin'            => 'nullable|string',
+            'license_plate'  => 'nullable|string',
+            'kilometres'     => 'nullable|integer',
+            'asset_number'   => 'nullable|integer',
+            'complaint'      => 'required|string',
         ]);
         $customer_info = CustomerInformation::create($request->all());
+        Mail::to('zachgallant26@gmail.com')->cc('sebgallant@hotmail.com')->send(new CustomerInformationMail($customer_info));
         return redirect()->route('main');
+    }
+    public function mailExample()
+    {
+        $data = CustomerInformation::where('id', 1)->first();
+        return new CustomerInformationMail($data);
     }
 }

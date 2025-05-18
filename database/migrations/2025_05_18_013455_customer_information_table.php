@@ -14,17 +14,15 @@ return new class extends Migration
         Schema::create('customer_information', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('date');
             $table->string('email');
-            $table->bigInteger('cell_phone')->nullable();
-            $table->bigInteger(column: 'home_phone')->nullable();
+            $table->bigInteger('phone');
             $table->smallInteger('year');
             $table->string(column: 'make');
             $table->string(column: 'model');
-            $table->string('VIN');
-            $table->string(column: 'license_plate');
-            $table->integer('kilometres');
-            $table->integer('asset_number');
+            $table->string('VIN')->nullable();
+            $table->string(column: 'license_plate')->nullable();
+            $table->integer('kilometres')->nullable();
+            $table->integer('asset_number')->nullable();
             $table->longText('complaint');
             $table->timestamps();
         });

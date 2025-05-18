@@ -13,10 +13,8 @@ class CustomerInformation extends Model
      */
     protected $fillable = [
         'name',
-        'date',
         'email',
-        'cell_phone',
-        'home_phone',
+        'phone',
         'year',
         'make',
         'model',

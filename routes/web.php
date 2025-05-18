@@ -9,11 +9,7 @@ Route::view('/', 'main')->name('main');
 Route::view('/testing', 'testing')->name('testing');
 
 
-Route::get('/mailable', function () {
-    return new App\Mail\CustomerInformationMail([
-        'example' => '',
-    ]); 
-});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -21,8 +17,10 @@ Route::get('/signin', function () {
     return view('signin');
 });
 
+Route::get('/mailable', [CustomerInformationController::class, 'mailExample']);
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact/create', [CustomerInformationController::class, 'create'])->name('customerInformationCreate');
+
 
 Route::get('/signin', [AuthController::class, 'showRegister']);
 Route::get('/login', [AuthController::class, 'showLogin']);
