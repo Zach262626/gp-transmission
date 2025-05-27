@@ -13,6 +13,7 @@
     {{-- Owl Carousel Styles --}}
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <meta name="description" content="Experts in transmission repair and auto services in Campbellton. Call 506-790-7776 or submit a service request form.">
 
 
     <link rel="shortcut icon" href="./favicon.ico">
@@ -26,6 +27,7 @@
     <!-- Loader CSS only uses dark background -->
     @yield('header')
 </head>
+
 <body id="{{ $activePage }}">
     @include('layouts.navbars.nav_top', ['headerId' => $headerId ?? 'Header', 'type' => $type ?? 'main'])
 
