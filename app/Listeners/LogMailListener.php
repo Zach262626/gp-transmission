@@ -22,6 +22,34 @@ class LogMailListener
             'subject' => $subject,
         ]);
     }
+    #[\Illuminate\Events\Attributes\Listener]
+    public function handleMessageSent(MessageSent $event)
+    {
+        $to = $this->getRecipients($event->message);
+        $subject = $event->message->getSubject();
+
+        Log::channel('mail')->info('Email sent successfully', [
+            'to' => $to,
+            'subject' => $subject,
+        ]);
+    }
+
+    #[\Illuminate\Events\Attributes\Listener]
+    public function handleMessageFailed(MessageFailed $event)
+    {
+        $to = $this->getRecipients($event->message);
+        $subject = $event->message->getSubject();
+        $error = $event->exception->getMessage();
+
+        Log::channel('mail')->error('Email failed to send', [
+            'to' => $to,
+            'subject' => $subject,
+            'error' => $error,
+        ]);
+
+        // Also send admin alert
+        $this->sendAdminAlert($to, $subject, $error);
+    }
 
     /**
      * Send alert to admin when email fails
@@ -30,10 +58,10 @@ class LogMailListener
     public function sendAdminAlert($recipients, $subject, $error)
     {
         try {
-            $adminEmail = env('ADMIN_EMAIL', config('mail.from.address'));
+            $adminEmail = env('ADMIN_CC_EMAIL', config('mail.from.address'));
 
             if (!$adminEmail) {
-                Log::warning('ADMIN_EMAIL not configured, cannot send failure alert');
+                Log::warning('ADMIN_CC_EMAIL not configured, cannot send failure alert');
                 return;
             }
 
@@ -51,8 +79,8 @@ class LogMailListener
                 }
             );
 
-            Log::channel('mail')->info('Admin alert sent', [
-                'admin_email' => $adminEmail,
+            Log::channel('mail')->info('Admin CC alert sent', [
+                'ADMIN_CC_EMAIL' => $adminEmail,
                 'recipients' => $recipientStr,
                 'error' => $error,
             ]);
