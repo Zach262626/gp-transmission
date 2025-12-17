@@ -3,9 +3,7 @@
 @section('content')
   <div style="max-width: 800px; margin: 0 auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
     <h1 style="text-align: center; color: #333;">All Submissions</h1>
-    @if($submissions->isEmpty())
-      <p style="text-align: center; color: #999;">No submissions yet.</p>
-    @else
+
     <ul style="list-style: none; padding: 0;">
       @foreach($submissions as $data)
         <li style="border-bottom: 1px solid #ddd; padding: 12px 0;">
@@ -19,7 +17,6 @@
         </li>
       @endforeach
     </ul>
-    @endif
   </div>
 @endsection
 @endauth
