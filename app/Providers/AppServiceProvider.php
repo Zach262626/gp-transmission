@@ -28,5 +28,13 @@ class AppServiceProvider extends ServiceProvider
             MessageSending::class,
             [$listener, 'handleMessageSending']
         );
+        \Illuminate\Support\Facades\Event::listen(
+            MessageSending::class,
+            [$listener, 'handleMessageSent']
+        );
+        \Illuminate\Support\Facades\Event::listen(
+            MessageSending::class,
+            [$listener, 'handleMessageFailed']
+        );
     }
 }
