@@ -14,8 +14,9 @@
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['name'] }}</td>
       </tr>
       <tr>
-        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Date:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['date'] }}</td>
+        <!-- FIXED: Changed from $data['date'] to $data['created_at']->format() -->
+        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Date Submitted:</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['created_at']->format('Y-m-d H:i:s') }}</td>
       </tr>
       <tr>
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Email:</td>
@@ -38,34 +39,34 @@
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['model'] }}</td>
       </tr>
       <tr>
+        <!-- FIXED: Changed from $data['VIN'] to $data['vin'] (case-sensitive) -->
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">VIN:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['VIN'] }}</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['vin'] ?? 'N/A' }}</td>
       </tr>
       <tr>
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">License Plate:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['license_plate'] }}</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['license_plate'] ?? 'N/A' }}</td>
       </tr>
       <tr>
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Kilometres:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ number_format($data['kilometres']) }} km</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ isset($data['kilometres']) ? number_format($data['kilometres']) . ' km' : 'N/A' }}</td>
       </tr>
       <tr>
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Asset Number:</td>
-        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['asset_number'] }}</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['asset_number'] ?? 'N/A' }}</td>
       </tr>
       <tr>
-        <td style="padding: 8px; font-weight: bold; vertical-align: top;">Complaint:</td>
-        <td style="padding: 8px;">{{ $data['complaint'] }}</td>
+        <td style="padding: 8px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ddd;">Complaint:</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd; white-space: pre-wrap;">{{ $data['complaint'] }}</td>
       </tr>
       <tr>
-        <td style="padding: 8px; font-weight: bold; border-top: 1px solid #ddd;">Created At:</td>
-        <td style="padding: 8px; border-top: 1px solid #ddd;">{{ $data['created_at'] }}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; font-weight: bold;">Updated At:</td>
-        <td style="padding: 8px;">{{ $data['updated_at'] }}</td>
+        <td style="padding: 8px; font-weight: bold; border-top: 1px solid #ddd;">Submitted:</td>
+        <td style="padding: 8px; border-top: 1px solid #ddd;">{{ $data['created_at']->format('Y-m-d H:i:s') }}</td>
       </tr>
     </table>
+    <p style="margin-top: 20px; font-size: 0.9em; color: #999; border-top: 1px solid #ddd; padding-top: 15px;">
+      This is an automated email notification. Please do not reply directly to this email.
+    </p>
   </div>
 </body>
 </html>
