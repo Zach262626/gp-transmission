@@ -26,6 +26,7 @@ Route::get('/signin', function () {
 
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact/create', [CustomerInformationController::class, 'create'])->name('customerInformationCreate');
+Route::get('/complaints', [CustomerInformationController::class, 'complaints'])->name('complaints')->middleware('auth');
 
 
 Route::get('/signin', [AuthController::class, 'showRegister']);
