@@ -18,7 +18,7 @@ class CustomerInformationMail extends Mailable
      */
     public function __construct(
         public $data,
-    ){}
+    ) {}
 
     /**
      * Get the message envelope.
@@ -38,6 +38,7 @@ class CustomerInformationMail extends Mailable
     {
         return new Content(
             view: 'mail.customer_information',
+            with: ['data' => $this->data],
         );
     }
 

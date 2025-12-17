@@ -15,14 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->bigInteger('phone');
-            $table->smallInteger('year');
-            $table->string(column: 'make');
-            $table->string(column: 'model');
-            $table->string('VIN')->nullable();
-            $table->string(column: 'license_plate')->nullable();
+            $table->string('phone', 20); // changed from bigInteger
+            $table->year('year');
+            $table->string('make', 100);
+            $table->string('model', 100);
+            $table->string('vin', 17)->nullable(); // lowercase + length
+            $table->string('license_plate')->nullable(); // string, not int
             $table->integer('kilometres')->nullable();
-            $table->integer('asset_number')->nullable();
+            $table->string('asset_number')->nullable(); // changed to string
             $table->longText('complaint');
             $table->timestamps();
         });
