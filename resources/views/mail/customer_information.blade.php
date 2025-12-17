@@ -14,7 +14,6 @@
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['name'] }}</td>
       </tr>
       <tr>
-        <!-- FIXED: Changed from $data['date'] to $data['created_at']->format() -->
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Date Submitted:</td>
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['created_at']->format('Y-m-d H:i:s') }}</td>
       </tr>
@@ -39,7 +38,6 @@
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['model'] }}</td>
       </tr>
       <tr>
-        <!-- FIXED: Changed from $data['VIN'] to $data['vin'] (case-sensitive) -->
         <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">VIN:</td>
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['vin'] ?? 'N/A' }}</td>
       </tr>
