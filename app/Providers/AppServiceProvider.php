@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Listeners\LogMailListener;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,5 +22,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Schema::defaultStringLength(191);
+        $listener = new LogMailListener();
+        
+        \Illuminate\Support\Facades\Event::listen(
+            MessageSending::class,
+            [$listener, 'handleMessageSending']
+        );
     }
 }
