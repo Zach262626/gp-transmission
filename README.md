@@ -135,11 +135,3 @@ Once the project is set up, here are some common commands you might need:
 ├── storage/             # Logs and file uploads
 └── tests/               # Unit and feature tests
 ```
-
-## Contributing
-
-[Add your contribution guidelines here]
-
-## License
-
-[Add your license information here]
