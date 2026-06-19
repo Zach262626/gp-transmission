@@ -14,8 +14,13 @@ Before you get started, make sure you have the following installed on your machi
 - **PHP 8.1+** - Laravel's language requirement
 - **Composer** - PHP dependency manager
 - **Node.js & npm** - For frontend asset compilation
-- **Docker** - For running the application with Laravel Sail
-- **WSL 2** (Windows only) - Windows Subsystem for Linux for Docker support
+
+You can run this project in **one of two ways** — pick whichever you prefer:
+
+- **Docker (Laravel Sail)** — needs **Docker**, plus **WSL 2** on Windows. Self-contained PHP + MySQL + phpMyAdmin in containers. Note: on Windows the code is bind-mounted into the container, which makes Artisan commands and migrations noticeably slower.
+- **Local (native)** — needs a local **PHP** and **MySQL** server. On Windows this is typically **WAMP**/Laragon; on macOS Herd/Valet. Faster than Docker on Windows.
+
+The shared steps below apply to both. Then follow **either** the Docker path **or** the Local path.
 
 ## Installation
 
@@ -44,9 +49,10 @@ cp .env.example .env
 ```
 
 Then edit the `.env` file and configure:
-- Database credentials (if needed for local testing)
-- App name and URL
-- Any other environment-specific variables
+- Database credentials, App name and URL, and any other environment-specific variables
+- **`DB_HOST` depends on which setup you use** (this is the most common source of "migrate is slow / can't connect"):
+  - **Docker:** `DB_HOST=mysql` (the Sail service name)
+  - **Local/WAMP:** `DB_HOST=127.0.0.1` (use `127.0.0.1`, not `localhost` — on Windows `localhost` is slow to resolve)
 
 ### 5. Build Frontend Assets
 ```bash
@@ -58,56 +64,50 @@ For development with hot reload, you can use:
 npm run dev
 ```
 
-### 6. Start Docker & Laravel Sail
+### 6. Finish setup — choose your path
+
+#### Option A — Docker (Laravel Sail)
+
+Make sure `DB_HOST=mysql` in your `.env`, then:
+
 ```bash
+# Start the containers (first run downloads/builds images)
 ./vendor/bin/sail up -d
-```
 
-This command starts the Docker containers in the background. On first run, it will download and build the necessary images.
-
-### 7. Generate Application Key
-```bash
+# Generate the app key, run migrations (add --seed for test data)
 ./vendor/bin/sail artisan key:generate
+./vendor/bin/sail artisan migrate --seed
 ```
 
-### 8. Run Database Migrations
+Your app is now running at `http://localhost` (phpMyAdmin at `http://localhost:8081`). Verify containers with `./vendor/bin/sail ps`.
+
+#### Option B — Local (WAMP / native PHP & MySQL)
+
+Make sure your local MySQL server is running and the database exists (create it in phpMyAdmin/CLI if not). Set `DB_HOST=127.0.0.1` in your `.env`, then run Artisan directly with `php`:
+
 ```bash
-./vendor/bin/sail artisan migrate
+# Create the database (skip if it already exists)
+# e.g. in MySQL:  CREATE DATABASE gp_website;
+
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve   # serves at http://localhost:8000
 ```
 
-If you have seeders to populate the database with test data:
-```bash
-./vendor/bin/sail artisan migrate:seed
-```
-
-### 9. Verify Installation
-Your application should now be running at `http://localhost`. You can verify Docker containers are running with:
-```bash
-./vendor/bin/sail ps
-```
+When using WAMP, you can also just place the project under `www/` and browse to it via Apache instead of `php artisan serve`.
 
 ## Useful Commands
 
-Once the project is set up, here are some common commands you might need:
+Once the project is set up, here are some common commands. The Sail (`./vendor/bin/sail ...`) versions run inside Docker; the plain `php`/`npm` versions run locally.
 
 ```bash
-# Start the Docker environment
-./vendor/bin/sail up -d
-
-# Stop the Docker environment
-./vendor/bin/sail stop
-
-# View container logs
-./vendor/bin/sail logs
-
-# Run Artisan commands
-./vendor/bin/sail artisan <command>
-
-# Access the application shell
-./vendor/bin/sail tinker
-
-# Run tests
-./vendor/bin/sail test
+# Docker (Laravel Sail)          # Local (native)
+./vendor/bin/sail up -d          # (nothing — your local server is already running)
+./vendor/bin/sail stop           # (nothing)
+./vendor/bin/sail artisan <cmd>  php artisan <cmd>
+./vendor/bin/sail tinker         php artisan tinker
+./vendor/bin/sail test           php artisan test
+./vendor/bin/sail npm run dev    npm run dev
 ```
 
 ## Troubleshooting
@@ -120,9 +120,14 @@ Once the project is set up, here are some common commands you might need:
 **Port conflicts?**
 - If port 80 is already in use, you can specify a different port in your `.env` file
 
+**Migrations slow or "could not connect to database"?**
+- Almost always a `DB_HOST` mismatch. Use `DB_HOST=mysql` for **Docker**, or `DB_HOST=127.0.0.1` for **local/WAMP**.
+- After changing `.env`, clear the cached config: `php artisan config:clear` (or `./vendor/bin/sail artisan config:clear`).
+- Make sure the target MySQL is actually running (WAMP tray icon green, or `./vendor/bin/sail ps` for Docker).
+
 **Database migration errors?**
-- Check your `.env` database configuration matches the Docker setup
-- Run `./vendor/bin/sail artisan migrate:refresh --seed` to reset and reseed
+- Check your `.env` database configuration matches your chosen setup (Docker vs local)
+- Run `php artisan migrate:refresh --seed` (or the `sail` equivalent) to reset and reseed
 
 ## Project Structure
 
