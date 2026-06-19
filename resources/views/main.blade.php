@@ -227,20 +227,4 @@
             </div> --}}
         </div>
     </div>
-    <script type="module">
-        $(document).ready(function () {
-            (function ($) {
-                $('.owl-carousel').owlCarousel({
-                    padding: 5,
-                    center: true,
-                    items: 5,
-                    loop: true,
-                    //autoplay:true,
-                    autoplayTimeout: 2000,
-                    autoplayHoverPause: true,
-                    animateOut: 'fadeOut'
-                })
-            })(jQuery);
-        });
-    </script>
 @endsection
