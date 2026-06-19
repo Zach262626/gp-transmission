@@ -28,6 +28,11 @@
     
     <form method="post" action="{{ route('customerInformationCreate') }}">
       @csrf
+      {{-- Honeypot: hidden from real users; spam bots fill it in and get silently rejected. --}}
+      <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
+        <label for="website">Website (leave this blank)</label>
+        <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="">
+      </div>
       <div class="row g-3">
         <div class="col-md-3">
           <label for="name" class="form-label">Full Name *</label>

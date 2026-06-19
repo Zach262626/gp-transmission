@@ -12,7 +12,14 @@ class CustomerInformationController extends Controller
     //send email
     public function create(Request $request)
     {
-        $request->validate([
+        // Honeypot: the "website" field is hidden from real users via CSS. If it has a
+        // value, the submission is from a bot — silently pretend success without saving
+        // or emailing, so the bot can't tell it was rejected.
+        if ($request->filled('website')) {
+            return redirect()->route('main')->with('success', 'Thank you! Your information has been submitted successfully.');
+        }
+
+        $validated = $request->validate([
             'name'           => 'required|string|max:255',
             'email'          => 'required|email|max:255',
             'phone'          => 'required|string|min:10|max:20',
@@ -25,8 +32,9 @@ class CustomerInformationController extends Controller
             'asset_number'   => 'nullable|string|max:50',
             'complaint'      => 'required|string|min:10|max:5000',
         ]);
-        
-        $customer_info = CustomerInformation::create($request->all());
+
+        // Persist only validated fields (avoids mass-assigning arbitrary request input).
+        $customer_info = CustomerInformation::create($validated);
         
         try {
             Mail::to(env('ADMIN_EMAIL', 'sebgallant@hotmail.com'))

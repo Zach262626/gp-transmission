@@ -1,10 +1,9 @@
-# Project Name
+
 
 <p align="center">
   <img src="public/img/Logo-800p-sameCrlor.png" alt="Project Logo" width="400">
 </p>
 
-A brief description of what your project does and its main purpose.
 
 ## Requirements
 

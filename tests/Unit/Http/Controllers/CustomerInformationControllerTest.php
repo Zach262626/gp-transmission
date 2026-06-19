@@ -153,6 +153,23 @@ class CustomerInformationControllerTest extends TestCase
         });
     }
 
+    /**
+     * Test honeypot: a filled "website" field marks the submission as spam,
+     * so no email is sent (and the bot still sees a success redirect).
+     */
+    public function test_honeypot_blocks_spam_submission()
+    {
+        Mail::fake();
+
+        $data = $this->validData;
+        $data['website'] = 'http://spam.example.com'; // bots fill the hidden field
+
+        $response = $this->post(route('customerInformationCreate'), $data);
+
+        $response->assertRedirect(route('main'));
+        Mail::assertNothingSent();
+    }
+
     // ========================
     // VALIDATION TESTS
     // ========================
