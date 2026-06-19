@@ -165,6 +165,20 @@ $text-shadow: 0 1rem 3rem $dark;
             }
 
         }
+
+        // No hover on touch devices: let cards size to their content and keep
+        // the image in place instead of relying on the hover slide-up reveal.
+        @media (max-width: 767px) {
+            .main-item-md {
+                height: auto;
+                min-height: 160px;
+            }
+
+            .main-item-md .main-item-description,
+            .main-item-md:hover .main-item-description {
+                transform: none;
+            }
+        }
     }
 
     // #Review {
