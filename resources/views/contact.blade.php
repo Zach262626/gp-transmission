@@ -1,4 +1,8 @@
 @extends('layouts.app', ['activePage' => 'ContactPage', 'type' => 'contact'])
+
+@section('title', 'Request Service / Get a Quote | GP Transmission, Campbellton NB')
+@section('meta_description', 'Request transmission or auto repair service from GP Transmission in Campbellton, NB. Submit the form or call 506-790-7776 — we reply within one business day.')
+
 @section('content')
   <div class="container mt-5 text-light">
     <h2 class="mb-4 contact-form">Customer Information Form</h2>
@@ -36,7 +40,7 @@
       <div class="row g-3">
         <div class="col-md-3">
           <label for="name" class="form-label">Full Name *</label>
-          <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="John Doe" value="{{ old('name') }}" required>
+          <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="First and last name" value="{{ old('name') }}" required>
           @error('name')
             <div class="invalid-feedback">{{ $message }}</div>
           @enderror
@@ -137,7 +141,7 @@
 
         <div class="col-12">
           <label for="complaint" class="form-label">Description of Issue *</label>
-          <textarea name="complaint" class="form-control @error('complaint') is-invalid @enderror" id="complaint" rows="4" placeholder="Describe the issue in detail..." required>{{ old('complaint') }}</textarea>
+          <textarea name="complaint" class="form-control @error('complaint') is-invalid @enderror" id="complaint" rows="4" placeholder="e.g. slipping when shifting, fluid leak, warning light, or a noise — and when it started." required>{{ old('complaint') }}</textarea>
           @error('complaint')
             <div class="invalid-feedback">{{ $message }}</div>
           @enderror

@@ -14,7 +14,6 @@ Route::middleware(['auth'])->group(function () {
 Route::view('/', 'main')->name('main');
 Route::view('/services', 'services')->name('services');
 Route::view('/about', 'about')->name('about');
-Route::view('/testing', 'testing')->name('testing');
 
 // SEO: dynamic robots.txt + sitemap so the Sitemap URL is correct on any host.
 Route::get('/robots.txt', function () {

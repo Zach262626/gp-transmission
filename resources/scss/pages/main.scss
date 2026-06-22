@@ -407,6 +407,18 @@ select:focus-visible {
 /* On phones the service cards stack full-width. Hide the large decorative
    images (they're purely visual) and show compact text tiles instead. */
 @media (max-width: 767.98px) {
+
+    /* Hero no longer eats the whole first screen on phones. */
+    #MainPage #Header {
+        height: auto;
+        min-height: 60vh;
+        padding: 3rem 0;
+    }
+
+    #MainPage #Header .header_content-description {
+        font-size: 2rem;
+    }
+
     #MainPage #Main .main-item-md {
         height: auto;
         min-height: 0;
@@ -424,6 +436,11 @@ select:focus-visible {
 
     #MainPage #Main #main-item-7 .main-item-header {
         font-size: 1rem;
+    }
+
+    /* Reserve space so the fixed call button never covers the submit button or footer. */
+    body {
+        padding-bottom: 4.5rem;
     }
 }
 

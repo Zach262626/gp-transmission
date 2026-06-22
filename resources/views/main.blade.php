@@ -43,7 +43,8 @@
         }
       ],
       "sameAs": [
-        "https://www.facebook.com/SgAutoTransmission"
+        "https://www.facebook.com/SgAutoTransmission",
+        "https://g.co/kgs/itpTF2k"
       ]
     }
     </script>
@@ -51,7 +52,13 @@
 
 @section('content')
     <div id="Header">
-        <img class="header_bg" src="./img/cards/gptransmission.png" alt="" fetchpriority="high">
+        <picture>
+            <source type="image/webp"
+                srcset="{{ asset('img/cards/gptransmission-1280.webp') }} 1280w, {{ asset('img/cards/gptransmission.webp') }} 2000w"
+                sizes="100vw">
+            <img class="header_bg" src="{{ asset('img/cards/gptransmission.png') }}" alt="" width="2604"
+                height="1398" fetchpriority="high" decoding="async">
+        </picture>
         <div class="container">
             <div class="section_content row">
                 <div class="col-12">
@@ -59,13 +66,17 @@
                 </div>
             </div>
             {{-- ADD APPOINTMENT --}}
-            <div class="section_content row mt-5">
-                <div class="col-12">
-                    <form action="{{ route('contact') }}" method="get">
+            <div class="section_content row mt-4">
+                <div class="col-12 d-flex flex-wrap gap-2">
+                    <form action="{{ route('contact') }}" method="get" class="m-0">
                         <button type="submit" class="btn shadow-lg h-100 fs-2 rounded appointment-button">
                             <strong>Request Service</strong>
                         </button>
                     </form>
+                    <a href="tel:+15067907776"
+                        class="btn shadow-lg h-100 fs-2 rounded appointment-button d-md-none">
+                        <strong>Call Now</strong>
+                    </a>
                 </div>
             </div>
         </div>
@@ -76,14 +87,22 @@
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-1">
                         <h2 class="main-item-header fs-1" style="z-index:11; position: relative;">TIRES</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/tire.png" alt="" loading="lazy" decoding="async">
+                        <div class="main-item-description"><picture>
+                                <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <source type="image/webp" srcset="{{ asset('img/cards/tire.webp') }}">
+                                <img class="header_bg" src="{{ asset('img/cards/tire.png') }}" alt="" width="800" height="800" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-7 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-2">
                         <h2 class="main-item-header">TRANSMISSIONS</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car.png" alt="" loading="lazy" decoding="async">
+                        <div class="main-item-description"><picture>
+                                <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <source type="image/webp" srcset="{{ asset('img/cards/car.webp') }}">
+                                <img class="header_bg" src="{{ asset('img/cards/car.png') }}" alt="" width="800" height="400" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -92,7 +111,11 @@
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-3">
                         <h2 class="main-item-header">MOTOR VEHICLE INSPECTION</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/key.png" alt="" loading="lazy" decoding="async">
+                        <div class="main-item-description"><picture>
+                                <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <source type="image/webp" srcset="{{ asset('img/cards/key.webp') }}">
+                                <img class="header_bg" src="{{ asset('img/cards/key.png') }}" alt="" width="800" height="380" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -100,15 +123,22 @@
                     <div class="main-item-md shadow-lg" id="main-item-4">
                         <h2 class="main-item-header">OIL
                             CHANGES</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/oil.png" alt="" loading="lazy" decoding="async">
+                        <div class="main-item-description"><picture>
+                                <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <source type="image/webp" srcset="{{ asset('img/cards/oil.webp') }}">
+                                <img class="header_bg" src="{{ asset('img/cards/oil.png') }}" alt="" width="800" height="1326" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-5">
                         <h2 class="main-item-header">BRAKES</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/pedals.png"
-                                alt="" loading="lazy" decoding="async"></div>
+                        <div class="main-item-description"><picture>
+                                <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <source type="image/webp" srcset="{{ asset('img/cards/pedals.webp') }}">
+                                <img class="header_bg" src="{{ asset('img/cards/pedals.png') }}" alt="" width="800" height="524" loading="lazy" decoding="async">
+                            </picture></div>
                     </div>
                 </div>
             </div>
@@ -117,16 +147,23 @@
                     <div class="main-item-md shadow-lg" id="main-item-6">
                         <h2 class="main-item-header">TUNE
                             UPS</h2>
-                        <div class="main-item-description"><img class="header_bg" src="./img/cards/car2.png" alt="" loading="lazy" decoding="async">
+                        <div class="main-item-description"><picture>
+                                <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+                                <source type="image/webp" srcset="{{ asset('img/cards/car2.webp') }}">
+                                <img class="header_bg" src="{{ asset('img/cards/car2.png') }}" alt="" width="800" height="522" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-7">
-                        <h2 class="main-item-header">+ SUSPENSION</h2>
-                        <h2 class="main-item-header">+ AIR CONDITIONER</h2>
-                        <h2 class="main-item-header">+ BATTERIES</h2>
-                        <h2 class="main-item-header">+ MORE</h2>
+                        <div class="d-none d-md-block">
+                            <h2 class="main-item-header">+ SUSPENSION</h2>
+                            <h2 class="main-item-header">+ AIR CONDITIONER</h2>
+                            <h2 class="main-item-header">+ BATTERIES</h2>
+                            <h2 class="main-item-header">+ MORE</h2>
+                        </div>
+                        <h2 class="main-item-header d-md-none">+ Suspension, A/C, Batteries &amp; more</h2>
                     </div>
                 </div>
             </div>
@@ -190,7 +227,7 @@
                     <div class="h-100 map-facade"
                         data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.5111874695913!2d-66.65408332358444!3d48.003833071229046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c982123f39f9b47%3A0x24d7005ac2504c44!2sGP%20Transmission%20%26%20Auto%20repair%20Inc.!5e0!3m2!1sen!2sca!4v1723596212599!5m2!1sen!2sca">
                         <button type="button" class="btn btn-light map-facade-btn w-100 h-100">
-                            <strong>📍 View map — GP Transmission, 47 Rue Vanier, Campbellton</strong>
+                            <strong><span aria-hidden="true">📍</span> View map — GP Transmission, 47 Rue Vanier, Campbellton</strong>
                         </button>
                     </div>
                 </div>
@@ -256,15 +293,6 @@
                     </div>
                 </div>
             </div>
-            {{-- ADD APPOINTMENT --}}
-            {{-- <div class="row align-items-center">
-                <div class="col-md-12  contact-item-md" style="height: 150px;">
-                    <button type="button"
-                        class="btn btn-light border border-dark border-2 shadow-lg w-100 h-100 fs-1 rounded-pill appointment-button"><strong>CLICK
-                            HERE TO
-                            MAKE AN APPOINTMENT</strong></button>
-                </div>
-            </div> --}}
         </div>
     </div>
     <script type="module">

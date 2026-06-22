@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light pt-2" id="Navbar1">
     <div class="container d-flex border-bottom border-2 border-secondary align-middle ">
         <a class="navbar-brand" href="/">
-            <img src="./img/Header.png" alt="GP Transmission home" height="75">
+            <img src="{{ asset('img/Header.png') }}" alt="GP Transmission home" height="75">
         </a>
         @if ($type == "login")
             <div class="collapse navbar-collapse" id="navbarScroll1">
@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse" id="navbarScroll1">
                 <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item mx-2 my-1">
-                        <a class="fs-5 btn-nav-top" href="/login">Login In</a>
+                        <a class="fs-5 btn-nav-top" href="/login">Login</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +43,7 @@
                     @endif
                     @auth
                         <li class="nav-item mx-2 my-1 ml-4">
-                            <a class="fs-5 btn-nav-top" href="/complaints">complaints</a>
+                            <a class="fs-5 btn-nav-top" href="/complaints">Complaints</a>
                         </li>
                         <li class="nav-item mx-2 my-1 ml-4">
                             <form action="{{ route('logout') }}" method="post">
@@ -61,10 +61,10 @@
     style="background-color:#d9d9d9ee; visibility: hidden">
     <div class="container px-3">
         <a class="navbar-brand d-none d-md-block" href="/">
-            <img src="./img/Header.png" alt="GP Transmission home" height="50">
+            <img src="{{ asset('img/Header.png') }}" alt="GP Transmission home" height="50">
         </a>
         <a class="navbar-brand d-block d-md-none" href="/">
-            <img src="./img/Header.png" alt="GP Transmission home" height="25">
+            <img src="{{ asset('img/Header.png') }}" alt="GP Transmission home" height="25">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll2"
             aria-controls="navbarScroll2" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +74,7 @@
             <div class="collapse navbar-collapse" id="navbarScroll2">
                 <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="ml-2 nav-style-li" >
-                        <a class="nav-link btn-nav mx-2 my-1" href="/signin">Sigin</a>
+                        <a class="nav-link btn-nav mx-2 my-1" href="/signin">Sign In</a>
                     </li>
                 </ul>
             </div>
@@ -103,7 +103,7 @@
                     </li>
                     @auth
                          <li class="ml-2 nav-style-li" >
-                            <a class="nav-link btn-nav mx-2 my-1" href="/complaints">complaints</a>
+                            <a class="nav-link btn-nav mx-2 my-1" href="/complaints">Complaints</a>
                         </li>
                         <li class="ml-2 nav-style-li" >
                             <form action="{{ route('logout') }}" method="post">

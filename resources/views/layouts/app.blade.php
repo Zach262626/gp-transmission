@@ -13,11 +13,15 @@
     {{-- Open Graph / social sharing --}}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GP Transmission & Auto Repair Inc.">
-    <meta property="og:title" content="@yield('title', 'GP Transmission | Campbellton, NB')">
+    <meta property="og:title"
+        content="@yield('title', 'GP Transmission | Transmission & Auto Repair in Campbellton, NB')">
     <meta property="og:description"
-        content="@yield('meta_description', 'Transmission repair and auto service in Campbellton, NB.')">
+        content="@yield('meta_description', 'Experts in transmission repair and auto services in Campbellton, NB. Call 506-790-7776 or submit a service request online.')">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('img/cards/gptransmission.png') }}">
+    <meta property="og:image" content="{{ asset('img/cards/og-share.jpg') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="644">
+    <meta property="og:image:alt" content="GP Transmission & Auto Repair Inc., Campbellton NB">
     <meta name="twitter:card" content="summary_large_image">
 
     {{-- Fonts (loaded via <link> instead of a render-blocking @import in SCSS) --}}
@@ -26,7 +30,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap">
 
-    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 

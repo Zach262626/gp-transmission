@@ -42,9 +42,9 @@
     <div class="container my-5 text-light">
         <h1 class="mb-4">Our Services in Campbellton, NB</h1>
         <p class="lead">
-            GP Transmission is a full-service auto shop specializing in transmission repair, serving
-            Campbellton and the Restigouche region. From a slipping transmission to a routine oil change,
-            our team keeps your vehicle on the road.
+            A full-service auto shop specializing in transmission repair, serving Campbellton and the
+            Restigouche region.<span class="d-none d-md-inline"> From a slipping transmission to a routine
+                oil change, our team keeps your vehicle on the road.</span>
         </p>
 
         <div class="row g-4 mt-2">

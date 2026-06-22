@@ -17,7 +17,7 @@
                     Campbellton, New Brunswick. Transmission repair is our specialty, and we also handle
                     everything from brakes and tires to MVI inspections and oil changes.
                 </p>
-                <p>
+                <p class="d-none d-md-block">
                     We're proud to serve drivers across Campbellton and the Restigouche region with honest
                     diagnostics and quality workmanship. When something's wrong with your vehicle, we'll
                     explain what we find in plain language before any work begins.
