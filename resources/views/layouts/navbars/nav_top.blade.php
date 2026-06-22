@@ -1,8 +1,8 @@
 {{-- To make nav bar remove fixed-top --}}
-<nav class="navbar navbar-expand-lg navbar-light pt-2 d-none d-md-block" id="Navbar1">
+<nav class="navbar navbar-expand-lg navbar-light pt-2" id="Navbar1">
     <div class="container d-flex border-bottom border-2 border-secondary align-middle ">
-        <a class="navbar-brand d-none d-md-block" href="/">
-            <img src="./img/Header.png" alt="" height="75">
+        <a class="navbar-brand" href="/">
+            <img src="./img/Header.png" alt="GP Transmission home" height="75">
         </a>
         @if ($type == "login")
             <div class="collapse navbar-collapse" id="navbarScroll1">
@@ -27,15 +27,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll1">
                 <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll text-secondary" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item mx-2 my-1">
+                        <a class="fs-5 btn-nav-top" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <a class="fs-5 btn-nav-top" href="/about">About</a>
+                    </li>
+                    <li class="nav-item mx-2 my-1">
+                        <a class="fs-5 btn-nav-top" href="tel:+15067907776">Call: 506-790-7776</a>
+                    </li>
                     @if ($type != 'contact')
                         <li class="nav-item mx-2 my-1">
                             <a class="fs-5 btn-nav-top" href="/contact">Service Request</a>
                         </li>
                     @endif
                     @auth
-                        <li class="nav-item mx-2 my-1 ml-4">
-                            <a class="fs-5 btn-nav-top" href="/telescope">telescope</a>
-                        </li>
                         <li class="nav-item mx-2 my-1 ml-4">
                             <a class="fs-5 btn-nav-top" href="/complaints">complaints</a>
                         </li>
@@ -55,10 +61,10 @@
     style="background-color:#d9d9d9ee; visibility: hidden">
     <div class="container px-3">
         <a class="navbar-brand d-none d-md-block" href="/">
-            <img src="./img/Header.png" alt="" height="50">
+            <img src="./img/Header.png" alt="GP Transmission home" height="50">
         </a>
         <a class="navbar-brand d-block d-md-none" href="/">
-            <img src="./img/Header.png" alt="" height="25">
+            <img src="./img/Header.png" alt="GP Transmission home" height="25">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll2"
             aria-controls="navbarScroll2" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,12 +92,18 @@
                     <li class="ml-2">
                         <a class="nav-link btn-nav mx-2 my-1" href="/">Home</a>
                     </li>
+                    <li class="ml-2 nav-style-li">
+                        <a class="nav-link btn-nav mx-2 my-1" href="/services">Services</a>
+                    </li>
+                    <li class="ml-2 nav-style-li">
+                        <a class="nav-link btn-nav mx-2 my-1" href="/about">About</a>
+                    </li>
+                    <li class="ml-2 nav-style-li">
+                        <a class="nav-link btn-nav mx-2 my-1" href="tel:+15067907776">Call: 506-790-7776</a>
+                    </li>
                     @auth
                          <li class="ml-2 nav-style-li" >
                             <a class="nav-link btn-nav mx-2 my-1" href="/complaints">complaints</a>
-                        </li>
-                        <li class="ml-2 nav-style-li" >
-                            <a class="nav-link btn-nav mx-2 my-1" href="/telescope">telescope</a>
                         </li>
                         <li class="ml-2 nav-style-li" >
                             <form action="{{ route('logout') }}" method="post">
@@ -102,7 +114,7 @@
                     @endauth
                     @if($type != 'contact')
                         <li class="ml-2 nav-style-li">
-                            <a class="nav-link btn-nav mx-2 my-1 text-right" 
+                            <a class="nav-link btn-nav mx-2 my-1 text-right"
                                 href="/contact">Service Request</a>
                         </li>
                     @endif

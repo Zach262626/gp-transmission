@@ -22,6 +22,8 @@ class CustomerInformation extends Model
         'license_plate',
         'kilometres',
         'asset_number',
+        'preferred_date',
+        'preferred_time',
         'complaint',
 
     ];
@@ -32,7 +34,7 @@ class CustomerInformation extends Model
      * @var array<int, string>
      */
     protected $hidden = [
-        
+
     ];
 
     /**
@@ -44,6 +46,7 @@ class CustomerInformation extends Model
     {
         return [
             'date' => 'date',
+            'preferred_date' => 'date',
         ];
     }
 }

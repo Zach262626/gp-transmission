@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Dela+Gothic+One&display=swap");
+// Fonts are loaded via <link> in layouts/app.blade.php (faster than a render-blocking @import).
 
 $primary: #000c21;
 $secondary: #2f64ae;

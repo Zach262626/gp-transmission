@@ -115,6 +115,26 @@
           @enderror
         </div>
 
+        <div class="col-md-6">
+          <label for="preferred_date" class="form-label">Preferred Date (optional)</label>
+          <input name="preferred_date" type="date" class="form-control @error('preferred_date') is-invalid @enderror" id="preferred_date" min="{{ date('Y-m-d') }}" value="{{ old('preferred_date') }}">
+          @error('preferred_date')
+            <div class="invalid-feedback">{{ $message }}</div>
+          @enderror
+        </div>
+
+        <div class="col-md-6">
+          <label for="preferred_time" class="form-label">Preferred Time (optional)</label>
+          <select name="preferred_time" class="form-select @error('preferred_time') is-invalid @enderror" id="preferred_time">
+            <option value="" {{ old('preferred_time') ? '' : 'selected' }}>No preference</option>
+            <option value="Morning" {{ old('preferred_time') === 'Morning' ? 'selected' : '' }}>Morning</option>
+            <option value="Afternoon" {{ old('preferred_time') === 'Afternoon' ? 'selected' : '' }}>Afternoon</option>
+          </select>
+          @error('preferred_time')
+            <div class="invalid-feedback">{{ $message }}</div>
+          @enderror
+        </div>
+
         <div class="col-12">
           <label for="complaint" class="form-label">Description of Issue *</label>
           <textarea name="complaint" class="form-control @error('complaint') is-invalid @enderror" id="complaint" rows="4" placeholder="Describe the issue in detail..." required>{{ old('complaint') }}</textarea>
@@ -125,7 +145,8 @@
 
         <!-- Submit -->
         <div class="col-12">
-          <button type="submit" class="btn btn-light">Submit Request</button>
+          <button type="submit" class="btn btn-light btn-lg fw-bold">Send My Request</button>
+          <p class="mt-2 mb-0" style="font-size: 0.9em;">We'll get back to you within one business day. No obligation.</p>
         </div>
       </div>
     </form>

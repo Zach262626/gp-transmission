@@ -54,6 +54,14 @@
         <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['asset_number'] ?? 'N/A' }}</td>
       </tr>
       <tr>
+        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Preferred Date:</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['preferred_date'] ? $data['preferred_date']->format('Y-m-d') : 'N/A' }}</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #ddd;">Preferred Time:</td>
+        <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ $data['preferred_time'] ?? 'N/A' }}</td>
+      </tr>
+      <tr>
         <td style="padding: 8px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ddd;">Complaint:</td>
         <td style="padding: 8px; border-bottom: 1px solid #ddd; white-space: pre-wrap;">{{ $data['complaint'] }}</td>
       </tr>
