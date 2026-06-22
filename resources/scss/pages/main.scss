@@ -404,11 +404,26 @@ select:focus-visible {
     }
 }
 
-/* On phones the service cards stack full-width; relax the fixed desktop height. */
+/* On phones the service cards stack full-width. Hide the large decorative
+   images (they're purely visual) and show compact text tiles instead. */
 @media (max-width: 767.98px) {
     #MainPage #Main .main-item-md {
         height: auto;
-        min-height: 160px;
+        min-height: 0;
+        padding: 0.85rem 1rem;
+
+        .main-item-description {
+            display: none;
+        }
+
+        .main-item-header {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+    }
+
+    #MainPage #Main #main-item-7 .main-item-header {
+        font-size: 1rem;
     }
 }
 

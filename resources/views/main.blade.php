@@ -143,25 +143,25 @@
                 <div class="col-md-3 col-6">
                     <div class="why-card h-100 text-center p-3">
                         <strong>Transmission Specialists</strong>
-                        <p class="mb-0">Rebuilds, repairs and diagnostics are our core trade.</p>
+                        <p class="mb-0 d-none d-md-block">Rebuilds, repairs and diagnostics are our core trade.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="why-card h-100 text-center p-3">
                         <strong>Full-Service Shop</strong>
-                        <p class="mb-0">Brakes, tires, oil, MVI inspections, tune-ups and more.</p>
+                        <p class="mb-0 d-none d-md-block">Brakes, tires, oil, MVI inspections, tune-ups and more.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="why-card h-100 text-center p-3">
                         <strong>Honest Diagnostics</strong>
-                        <p class="mb-0">Clear explanations before any work begins.</p>
+                        <p class="mb-0 d-none d-md-block">Clear explanations before any work begins.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="why-card h-100 text-center p-3">
                         <strong>Local to Campbellton</strong>
-                        <p class="mb-0">Serving Campbellton &amp; the Restigouche region.</p>
+                        <p class="mb-0 d-none d-md-block">Serving Campbellton &amp; the Restigouche region.</p>
                     </div>
                 </div>
             </div>
@@ -174,9 +174,8 @@
     <div id="Reviews" class="py-5">
         <div class="container text-center">
             <h2 class="text-light mb-3">What Our Customers Say</h2>
-            <p class="text-light mb-4">
-                We're proud of our reputation in the community. Read verified reviews from real
-                customers on our Google Business Profile.
+            <p class="text-light mb-4 d-none d-md-block">
+                Read verified reviews from real customers on our Google Business Profile.
             </p>
             <a href="https://g.co/kgs/itpTF2k" target="_blank" rel="noopener"
                 class="btn btn-light btn-lg">Read our Google reviews</a>
