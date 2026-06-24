@@ -26,10 +26,21 @@ Template:
   major is the *only* fix for #85/#86 but the affected `email` rule has **no reachable header
   sink** in this app (validated emails go to DB + escaped body only), so it's a planned change,
   not a vuln emergency.
-- **Owners / follow-up:** Group A/B/C1 + CI gate executed this session on the `dev` branch.
-  Laravel 11→12 stays DEFERRED — revisit on a maintenance window, or sooner if intake/auth adds
-  a Reply-To-from-user, a Markdown mailable, a route regex requirement, or an open redirect
-  (the watch-items that would make #85/#86 reachable).
+- **Owners / follow-up (EXECUTION OUTCOME):** Done on `dev`.
+  - **npm: all 35 alerts cleared** (Groups B + C1 — axios floor ^1.16.0, form-data 4.0.6,
+    rollup/picomatch/immutable/postcss, vite 5→6 pulling esbuild ≥0.25). `npm audit` = 0. Build green.
+  - **composer: partial.** During Group A the Symfony 7.4 security patches (http-foundation,
+    mime, mailer, routing, yaml) and psy/psysh were found to transitively pull **symfony/console
+    7.4, which breaks Laravel 11.44.7 command dispatch** (`artisan` crashes: "Call to a member
+    function make() on null"). So only the console-independent advisories were applied
+    (guzzle 7.12.3, psr7 2.12.3, commonmark 2.8.2, phpunit 11.5.55, polyfill-intl-idn 1.38.1).
+  - **NEW coupling:** the remaining Symfony advisories cannot be patched on the 11.x line and are
+    now **bundled into the deferred Laravel 11→12 upgrade**. All 69 tests green after the bumps.
+  - **CI:** added a PHP-test job (composer install + sqlite `php artisan test`); build bumped to
+    node 20 for vite 6. Pint gate intentionally NOT added yet (14 pre-existing style issues — needs
+    a separate `pint` cleanup pass first).
+  - Revisit Laravel 11→12 + remaining Symfony advisories on a maintenance window, or sooner per
+    the reachability watch-items above.
 
 ## 2026-06-24 — Add a dedicated front-end implementation engineer
 - **Decision:** Add `frontend-expert` (Blade/Bootstrap 5/SCSS/JS implementation craft),
