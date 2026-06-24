@@ -41,6 +41,9 @@ Subagents do not message each other directly; the facilitator relays. A topic ru
    `DB_CONNECTION=sqlite DB_DATABASE=:memory: php artisan test` must all pass before handoff.
 
 ## Ground rules
+- **Confidentiality:** never write secrets, `.env` values, API keys, credentials, tokens, or
+  customer PII into `PANEL_NOTES.md`, `findings_*.md`, `DECISIONS.md`, or any committed file.
+  Reference config by name/path only (e.g. `ADMIN_EMAIL`), never its value.
 - The PM owns product behavior, the auth model, and data-retention decisions — experts
   recommend, the PM decides; disagreements go to the PM, not forced consensus.
 - Mobile-first; watch vertical space and word count on phones.

@@ -14,6 +14,23 @@ Template:
 
 ---
 
+## 2026-06-24 — Dependabot remediation: PM rulings
+- **Decision:** (1) Run the safe bumps now — **Group A** (composer transitive point bumps, ~20
+  alerts) and **Group B** (npm safe bumps, ~34 alerts). (2) **vite 5→6 now** with a build
+  smoke-check (clears `esbuild` #12 → npm to zero). (3) **DEFER Laravel 11→12** (#85/#86) and
+  track here as accepted risk. (4) **Add a PHP-test CI gate** (composer install + sqlite
+  `php artisan test` + Pint) before merging composer changes.
+- **Context:** 57 Dependabot alerts. Panel positions (security/devops/backend) reached
+  consensus: none internet-exploitable today; 54/57 clear with safe one-shot bumps; 3 need majors.
+- **Why:** Clear the noise cheaply now and gate composer work with real tests. The framework
+  major is the *only* fix for #85/#86 but the affected `email` rule has **no reachable header
+  sink** in this app (validated emails go to DB + escaped body only), so it's a planned change,
+  not a vuln emergency.
+- **Owners / follow-up:** Group A/B/C1 + CI gate executed this session on the `dev` branch.
+  Laravel 11→12 stays DEFERRED — revisit on a maintenance window, or sooner if intake/auth adds
+  a Reply-To-from-user, a Markdown mailable, a route regex requirement, or an open redirect
+  (the watch-items that would make #85/#86 reachable).
+
 ## 2026-06-24 — Add a dedicated front-end implementation engineer
 - **Decision:** Add `frontend-expert` (Blade/Bootstrap 5/SCSS/JS implementation craft),
   distinct from `frontend-perf-a11y-expert` (optimization & accessibility audit) and
