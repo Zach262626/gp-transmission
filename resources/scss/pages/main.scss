@@ -288,7 +288,8 @@ $text-shadow: 0 1rem 3rem $dark;
     .btn-nav-top {
         transition: ease 500ms;
         text-decoration: none;
-        color: #2F64AE;
+        // Lightened from #2F64AE so it meets WCAG AA contrast on the dark header.
+        color: #6f9fdb;
     }
 
     .btn-nav-top:hover {
@@ -298,7 +299,7 @@ $text-shadow: 0 1rem 3rem $dark;
 
     .btn-nav-top:active {
         transition: ease 500ms;
-        color: #2F64AE;
+        color: #6f9fdb;
     }
 
 
@@ -321,6 +322,106 @@ $text-shadow: 0 1rem 3rem $dark;
 /* 4) Utility: hide via visibility if you still need it */
 .hide {
     visibility: hidden;
+}
+
+/* Tappable contact links keep the dark/light card styling. */
+.reach-us-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Map facade button fills the map area until clicked. */
+.map-facade {
+    .map-facade-btn {
+        border: 2px solid $dark;
+        border-radius: 8px;
+    }
+}
+
+/* Visible keyboard focus indicator (WCAG 2.4.7) — Bootstrap strips some of these. */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #6f9fdb;
+    outline-offset: 2px;
+}
+
+/* Mobile-only tap-to-call button (the primary conversion action on phones). */
+.mobile-call-bar {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1050;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    min-height: 48px;
+    border-radius: 999px;
+    background-color: #2f64ae;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #244e89;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* On phones the service cards stack full-width. Hide the large decorative
+   images (they're purely visual) and show compact text tiles instead. */
+@media (max-width: 767.98px) {
+
+    /* Hero no longer eats the whole first screen on phones. */
+    #MainPage #Header {
+        height: auto;
+        min-height: 60vh;
+        padding: 3rem 0;
+    }
+
+    #MainPage #Header .header_content-description {
+        font-size: 2rem;
+    }
+
+    #MainPage #Main .main-item-md {
+        height: auto;
+        min-height: 0;
+        padding: 0.85rem 1rem;
+
+        .main-item-description {
+            display: none;
+        }
+
+        .main-item-header {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+    }
+
+    #MainPage #Main #main-item-7 .main-item-header {
+        font-size: 1rem;
+    }
+
+    /* Reserve space so the fixed call button never covers the submit button or footer. */
+    body {
+        padding-bottom: 4.5rem;
+    }
 }
 
 #Footer {

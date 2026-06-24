@@ -32,7 +32,7 @@ class CustomerInformation extends Model
      * @var array<int, string>
      */
     protected $hidden = [
-        
+
     ];
 
     /**

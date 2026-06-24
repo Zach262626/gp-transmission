@@ -34,8 +34,14 @@ jobs:
         run: npm run build
 
       - name: Commit and push if changed
+        if: github.event_name == 'push'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add public/js public/css -f
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Build: Update compiled assets" && git push)
+          git add public/build -f
+          if git diff --staged --quiet; then
+            echo "No asset changes to commit."
+          else
+            git commit -m "Build: Update compiled assets"
+            git push
+          fi
