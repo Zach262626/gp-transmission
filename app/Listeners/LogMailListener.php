@@ -3,15 +3,15 @@
 namespace App\Listeners;
 
 use Illuminate\Mail\Events\MessageSending;
+use Illuminate\Mail\Events\MessageSent;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class LogMailListener
 {
     /**
-     * Log email sending attempt
+     * Log email sending attempt (Illuminate\Mail\Events\MessageSending)
      */
-    #[\Illuminate\Events\Attributes\Listener]
     public function handleMessageSending(MessageSending $event)
     {
         $to = $this->getRecipients($event->message);
@@ -22,7 +22,10 @@ class LogMailListener
             'subject' => $subject,
         ]);
     }
-    #[\Illuminate\Events\Attributes\Listener]
+
+    /**
+     * Log successful send (Illuminate\Mail\Events\MessageSent)
+     */
     public function handleMessageSent(MessageSent $event)
     {
         $to = $this->getRecipients($event->message);
@@ -34,21 +37,22 @@ class LogMailListener
         ]);
     }
 
-    #[\Illuminate\Events\Attributes\Listener]
-    public function handleMessageFailed(MessageFailed $event)
+    /**
+     * Record a send failure. Laravel dispatches no failure event, so this is
+     * invoked manually from the catch block at the call site (e.g.
+     * CustomerInformationController). Logs to the mail channel and alerts admin.
+     *
+     * @param  array<int, string>|string  $recipients
+     */
+    public function handleMessageFailed($recipients, ?string $subject, string $error)
     {
-        $to = $this->getRecipients($event->message);
-        $subject = $event->message->getSubject();
-        $error = $event->exception->getMessage();
-
         Log::channel('mail')->error('Email failed to send', [
-            'to' => $to,
+            'to' => $recipients,
             'subject' => $subject,
             'error' => $error,
         ]);
 
-        // Also send admin alert
-        $this->sendAdminAlert($to, $subject, $error);
+        $this->sendAdminAlert($recipients, $subject, $error);
     }
 
     /**
@@ -60,8 +64,9 @@ class LogMailListener
         try {
             $adminEmail = env('ADMIN_CC_EMAIL', config('mail.from.address'));
 
-            if (!$adminEmail) {
+            if (! $adminEmail) {
                 Log::warning('ADMIN_CC_EMAIL not configured, cannot send failure alert');
+
                 return;
             }
 
@@ -69,13 +74,13 @@ class LogMailListener
             $recipientStr = is_array($recipients) ? implode(', ', $recipients) : $recipients;
 
             Mail::raw(
-                "Email Delivery Failed\n\n" .
-                "Recipient(s): {$recipientStr}\n" .
-                "Subject: {$subject}\n" .
+                "Email Delivery Failed\n\n".
+                "Recipient(s): {$recipientStr}\n".
+                "Subject: {$subject}\n".
                 "Error: {$error}",
                 function ($message) use ($adminEmail) {
                     $message->to($adminEmail)
-                            ->subject('⚠️ Email Delivery Failed');
+                        ->subject('⚠️ Email Delivery Failed');
                 }
             );
 
@@ -114,6 +119,6 @@ class LogMailListener
             }
         }
 
-        return !empty($recipients) ? $recipients : ['unknown'];
+        return ! empty($recipients) ? $recipients : ['unknown'];
     }
 }

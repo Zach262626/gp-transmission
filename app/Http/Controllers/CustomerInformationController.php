@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Listeners\LogMailListener;
 use App\Mail\CustomerInformationMail;
 use App\Models\CustomerInformation;
 use Illuminate\Http\Request;
@@ -36,14 +37,18 @@ class CustomerInformationController extends Controller
         // Persist only validated fields (avoids mass-assigning arbitrary request input).
         $customer_info = CustomerInformation::create($validated);
 
+        $adminEmail = env('ADMIN_EMAIL', 'sebgallant@hotmail.com');
+
         try {
-            Mail::to(env('ADMIN_EMAIL', 'sebgallant@hotmail.com'))
+            Mail::to($adminEmail)
                 ->cc(env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com'))
                 ->send(new CustomerInformationMail($customer_info));
 
             return redirect()->route('main')->with('success', 'Thank you! Your information has been submitted successfully.');
         } catch (\Exception $e) {
             \Log::error('Customer information email failed: '.$e->getMessage());
+            // Laravel has no MessageFailed event, so report the failure manually.
+            (new LogMailListener)->handleMessageFailed($adminEmail, 'New Service Request', $e->getMessage());
 
             return redirect()->back()->with('warning', 'Form submitted successfully, but confirmation email could not be sent.');
         }
