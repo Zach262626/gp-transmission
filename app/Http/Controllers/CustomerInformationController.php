@@ -30,8 +30,6 @@ class CustomerInformationController extends Controller
             'license_plate' => 'nullable|string|max:10',
             'kilometres' => 'nullable|integer|min:0',
             'asset_number' => 'nullable|string|max:50',
-            'preferred_date' => 'nullable|date|after_or_equal:today',
-            'preferred_time' => 'nullable|string|in:Morning,Afternoon',
             'complaint' => 'required|string|min:10|max:5000',
         ]);
 

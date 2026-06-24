@@ -1,8 +1,4 @@
 @extends('layouts.app', ['activePage' => 'ContactPage', 'type' => 'contact'])
-
-@section('title', 'Request Service / Get a Quote | GP Transmission, Campbellton NB')
-@section('meta_description', 'Request transmission or auto repair service from GP Transmission in Campbellton, NB. Submit the form or call 506-790-7776 — we reply within one business day.')
-
 @section('content')
   <div class="container mt-5 text-light">
     <h2 class="mb-4 contact-form">Customer Information Form</h2>
@@ -40,7 +36,7 @@
       <div class="row g-3">
         <div class="col-md-3">
           <label for="name" class="form-label">Full Name *</label>
-          <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="First and last name" value="{{ old('name') }}" required>
+          <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" placeholder="John Doe" value="{{ old('name') }}" required>
           @error('name')
             <div class="invalid-feedback">{{ $message }}</div>
           @enderror
@@ -119,29 +115,9 @@
           @enderror
         </div>
 
-        <div class="col-md-6">
-          <label for="preferred_date" class="form-label">Preferred Date (optional)</label>
-          <input name="preferred_date" type="date" class="form-control @error('preferred_date') is-invalid @enderror" id="preferred_date" min="{{ date('Y-m-d') }}" value="{{ old('preferred_date') }}">
-          @error('preferred_date')
-            <div class="invalid-feedback">{{ $message }}</div>
-          @enderror
-        </div>
-
-        <div class="col-md-6">
-          <label for="preferred_time" class="form-label">Preferred Time (optional)</label>
-          <select name="preferred_time" class="form-select @error('preferred_time') is-invalid @enderror" id="preferred_time">
-            <option value="" {{ old('preferred_time') ? '' : 'selected' }}>No preference</option>
-            <option value="Morning" {{ old('preferred_time') === 'Morning' ? 'selected' : '' }}>Morning</option>
-            <option value="Afternoon" {{ old('preferred_time') === 'Afternoon' ? 'selected' : '' }}>Afternoon</option>
-          </select>
-          @error('preferred_time')
-            <div class="invalid-feedback">{{ $message }}</div>
-          @enderror
-        </div>
-
         <div class="col-12">
           <label for="complaint" class="form-label">Description of Issue *</label>
-          <textarea name="complaint" class="form-control @error('complaint') is-invalid @enderror" id="complaint" rows="4" placeholder="e.g. slipping when shifting, fluid leak, warning light, or a noise — and when it started." required>{{ old('complaint') }}</textarea>
+          <textarea name="complaint" class="form-control @error('complaint') is-invalid @enderror" id="complaint" rows="4" placeholder="Describe the issue in detail..." required>{{ old('complaint') }}</textarea>
           @error('complaint')
             <div class="invalid-feedback">{{ $message }}</div>
           @enderror
@@ -149,8 +125,7 @@
 
         <!-- Submit -->
         <div class="col-12">
-          <button type="submit" class="btn btn-light btn-lg fw-bold">Send My Request</button>
-          <p class="mt-2 mb-0" style="font-size: 0.9em;">We'll get back to you within one business day. No obligation.</p>
+          <button type="submit" class="btn btn-light">Submit Request</button>
         </div>
       </div>
     </form>

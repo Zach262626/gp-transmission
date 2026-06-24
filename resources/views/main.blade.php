@@ -1,8 +1,5 @@
 @extends('layouts.app', ['activePage' => 'MainPage', 'type' => 'main']) {{-- **IMPORTANT TO ADD activePage for styling** --}}
 
-@section('title', 'Transmission Repair & Auto Service in Campbellton, NB | GP Transmission')
-@section('meta_description', 'GP Transmission is Campbellton\'s trusted shop for transmission repair, MVI inspections, brakes, tires, oil changes and tune-ups. Call 506-790-7776 or request service online.')
-
 @section('header')
     <script type="application/ld+json">
     {
@@ -62,21 +59,19 @@
         <div class="container">
             <div class="section_content row">
                 <div class="col-12">
-                    <h1 class="header_content-description">Transmission Repair &amp; Auto Service in Campbellton, NB</h1>
+                    <h2 class="header_content-description">BEST SERVICE</h2>
+                    <h2 class="header_content-description">IN THE</h2>
+                    <h2 class="header_content-description">EAST COAST</h2>
                 </div>
             </div>
             {{-- ADD APPOINTMENT --}}
-            <div class="section_content row mt-4">
-                <div class="col-12 d-flex flex-wrap gap-2">
-                    <form action="{{ route('contact') }}" method="get" class="m-0">
+            <div class="section_content row mt-5">
+                <div class="col-12">
+                    <form action="{{ route('contact') }}" method="get">
                         <button type="submit" class="btn shadow-lg h-100 fs-2 rounded appointment-button">
-                            <strong>Request Service</strong>
+                            <strong>ENTER CUSTOMER INFORMATION HERE</strong>
                         </button>
                     </form>
-                    <a href="tel:+15067907776"
-                        class="btn shadow-lg h-100 fs-2 rounded appointment-button d-md-none">
-                        <strong>Call Now</strong>
-                    </a>
                 </div>
             </div>
         </div>
@@ -157,66 +152,15 @@
                 </div>
                 <div class="col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-7">
-                        <div class="d-none d-md-block">
-                            <h2 class="main-item-header">+ SUSPENSION</h2>
-                            <h2 class="main-item-header">+ AIR CONDITIONER</h2>
-                            <h2 class="main-item-header">+ BATTERIES</h2>
-                            <h2 class="main-item-header">+ MORE</h2>
-                        </div>
-                        <h2 class="main-item-header d-md-none">+ Suspension, A/C, Batteries &amp; more</h2>
+                        <h2 class="main-item-header">+ SUSPENSION</h2>
+                        <h2 class="main-item-header">+ AIR CONDITIONER</h2>
+                        <h2 class="main-item-header">+ BATTERIES</h2>
+                        <h2 class="main-item-header">+ MORE</h2>
                     </div>
                 </div>
             </div>
         </div>
 
-    </div>
-    {{-- Why choose us — trust signals. NOTE for owner: if you offer a workmanship/parts
-         warranty, add it here (e.g. "12-month / 20,000 km warranty") — it is the single
-         biggest objection-remover for transmission work. --}}
-    <div id="WhyUs" class="py-5">
-        <div class="container">
-            <h2 class="text-light text-center mb-4">Why Choose GP Transmission</h2>
-            <div class="row g-3">
-                <div class="col-md-3 col-6">
-                    <div class="why-card h-100 text-center p-3">
-                        <strong>Transmission Specialists</strong>
-                        <p class="mb-0 d-none d-md-block">Rebuilds, repairs and diagnostics are our core trade.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="why-card h-100 text-center p-3">
-                        <strong>Full-Service Shop</strong>
-                        <p class="mb-0 d-none d-md-block">Brakes, tires, oil, MVI inspections, tune-ups and more.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="why-card h-100 text-center p-3">
-                        <strong>Honest Diagnostics</strong>
-                        <p class="mb-0 d-none d-md-block">Clear explanations before any work begins.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="why-card h-100 text-center p-3">
-                        <strong>Local to Campbellton</strong>
-                        <p class="mb-0 d-none d-md-block">Serving Campbellton &amp; the Restigouche region.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Real social proof: link out to the live Google Business Profile instead of
-         shipping a fabricated testimonial. Replace with cached, server-side Google
-         reviews once a Places API key is available. --}}
-    <div id="Reviews" class="py-5">
-        <div class="container text-center">
-            <h2 class="text-light mb-3">What Our Customers Say</h2>
-            <p class="text-light mb-4 d-none d-md-block">
-                Read verified reviews from real customers on our Google Business Profile.
-            </p>
-            <a href="https://g.co/kgs/itpTF2k" target="_blank" rel="noopener"
-                class="btn btn-light btn-lg">Read our Google reviews</a>
-        </div>
     </div>
     <div id="Contact">
         <div class="container my-5">
@@ -226,8 +170,9 @@
                          visitor asks for it (click), keeping initial page load fast. --}}
                     <div class="h-100 map-facade"
                         data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2669.5111874695913!2d-66.65408332358444!3d48.003833071229046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c982123f39f9b47%3A0x24d7005ac2504c44!2sGP%20Transmission%20%26%20Auto%20repair%20Inc.!5e0!3m2!1sen!2sca!4v1723596212599!5m2!1sen!2sca">
-                        <button type="button" class="btn btn-light map-facade-btn w-100 h-100">
-                            <strong><span aria-hidden="true">📍</span> View map — GP Transmission, 47 Rue Vanier, Campbellton</strong>
+                        <button type="button" class="btn btn-light map-facade-btn w-100 h-100"
+                            aria-label="Load map">
+                            <strong><span aria-hidden="true">📍</span> View map</strong>
                         </button>
                     </div>
                 </div>
@@ -240,8 +185,6 @@
                             <strong>HOW TO REACH US</strong>
                         </div>
                         <div>Phone: <a href="tel:+15067907776" class="reach-us-link">506-790-7776</a></div>
-                        {{-- TODO (owner): replace the personal Hotmail with a branded address
-                             (e.g. info@yourdomain.ca) once that mailbox exists. --}}
                         <div class="border-middle pb-2">e-mail:
                             <a href="mailto:sebgallant@hotmail.com" class="reach-us-link">sebgallant@hotmail.com</a>
                         </div>
@@ -249,7 +192,7 @@
                             <strong>Location</strong>
                         </div>
                         <ul class="list-unstyled">
-                            <li>GP Transmission &amp; Auto Repair Inc.</li>
+                            <li>GP Transsmision</li>
                             <li>47 Rue Vanier</li>
                             <li>Campbellton</li>
                             <li>E3N 1T8</li>

@@ -27,15 +27,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll1">
                 <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll text-secondary" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item mx-2 my-1">
-                        <a class="fs-5 btn-nav-top" href="/services">Services</a>
-                    </li>
-                    <li class="nav-item mx-2 my-1">
-                        <a class="fs-5 btn-nav-top" href="/about">About</a>
-                    </li>
-                    <li class="nav-item mx-2 my-1">
-                        <a class="fs-5 btn-nav-top" href="tel:+15067907776">Call: 506-790-7776</a>
-                    </li>
                     @if ($type != 'contact')
                         <li class="nav-item mx-2 my-1">
                             <a class="fs-5 btn-nav-top" href="/contact">Service Request</a>
@@ -91,15 +82,6 @@
                 <ul class="navbar-nav my-2 my-lg-0 ms-auto navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="ml-2">
                         <a class="nav-link btn-nav mx-2 my-1" href="/">Home</a>
-                    </li>
-                    <li class="ml-2 nav-style-li">
-                        <a class="nav-link btn-nav mx-2 my-1" href="/services">Services</a>
-                    </li>
-                    <li class="ml-2 nav-style-li">
-                        <a class="nav-link btn-nav mx-2 my-1" href="/about">About</a>
-                    </li>
-                    <li class="ml-2 nav-style-li">
-                        <a class="nav-link btn-nav mx-2 my-1" href="tel:+15067907776">Call: 506-790-7776</a>
                     </li>
                     @auth
                          <li class="ml-2 nav-style-li" >

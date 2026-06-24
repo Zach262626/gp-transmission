@@ -324,26 +324,6 @@ $text-shadow: 0 1rem 3rem $dark;
     visibility: hidden;
 }
 
-/* "Why choose us" + reviews sections on the home page. */
-#WhyUs {
-    background-color: $dark;
-
-    .why-card {
-        background-color: $light;
-        color: $dark;
-        border-radius: 16px;
-
-        strong {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-    }
-}
-
-#Reviews {
-    background-color: $dark;
-}
-
 /* Tappable contact links keep the dark/light card styling. */
 .reach-us-link {
     color: inherit;

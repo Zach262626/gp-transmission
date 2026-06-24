@@ -12,8 +12,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::view('/', 'main')->name('main');
-Route::view('/services', 'services')->name('services');
-Route::view('/about', 'about')->name('about');
 
 // SEO: dynamic robots.txt + sitemap so the Sitemap URL is correct on any host.
 Route::get('/robots.txt', function () {
@@ -34,7 +32,7 @@ Route::get('/robots.txt', function () {
 });
 
 Route::get('/sitemap.xml', function () {
-    $urls = ['/', '/services', '/about', '/contact'];
+    $urls = ['/', '/contact'];
     $xml = '<?xml version="1.0" encoding="UTF-8"?>'."\n";
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'."\n";
     foreach ($urls as $path) {
