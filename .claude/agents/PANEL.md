@@ -15,9 +15,10 @@ owner is the Project Manager (PM)**; Claude (main session) acts as **facilitator
 | `security-expert` | `security-expert.md` | Validation, auth, honeypot/throttle, PII, deps |
 | `qa-testing-expert` | `qa-testing-expert.md` | PHPUnit Feature/Unit/Integration coverage |
 
-## Marketing & front-end
+## Front-end & marketing
 | Agent | File | Lens |
 |-------|------|------|
+| `frontend-expert` | `frontend-expert.md` | Blade/Bootstrap/SCSS/JS implementation craft |
 | `seo-expert` | `seo-expert.md` | Local & technical SEO |
 | `ux-cro-expert` | `ux-cro-expert.md` | UX & conversion |
 | `frontend-perf-a11y-expert` | `frontend-perf-a11y-expert.md` | Performance & accessibility |
