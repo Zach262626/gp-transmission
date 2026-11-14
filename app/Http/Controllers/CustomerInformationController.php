@@ -37,8 +37,8 @@ class CustomerInformationController extends Controller
         $customer_info = CustomerInformation::create($validated);
         
         try {
-            Mail::to(env('ADMIN_EMAIL', 'sebgallant@hotmail.com'))
-                ->cc(env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com'))
+            Mail::to(config('mail.admin.address'))
+                ->cc(config('mail.admin.cc'))
                 ->send(new CustomerInformationMail($customer_info));
             
             return redirect()->route('main')->with('success', 'Thank you! Your information has been submitted successfully.');

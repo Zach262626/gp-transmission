@@ -58,7 +58,7 @@ class LogMailListener
     public function sendAdminAlert($recipients, $subject, $error)
     {
         try {
-            $adminEmail = env('ADMIN_CC_EMAIL', config('mail.from.address'));
+            $adminEmail = config('mail.admin.cc') ?: config('mail.from.address');
 
             if (!$adminEmail) {
                 Log::warning('ADMIN_CC_EMAIL not configured, cannot send failure alert');

@@ -54,7 +54,9 @@ Vite entry points are declared in `vite.config.js`: `resources/scss/app.scss` an
 
 ## Gotchas specific to this codebase
 
-- **`env()` is called directly in app code** (e.g. `ADMIN_EMAIL` in `CustomerInformationController`, `LogMailListener`). These return `null` when config is cached (`config:cache`). Prefer reading through `config()` if you add new env usage.
+- **Read env values through `config()`, never `env()`, in app code** — production runs `php artisan optimize` (config cache), where `env()` returns `null`. Admin recipients live at `config('mail.admin.address')` / `config('mail.admin.cc')`.
+- **Deployment:** pushing to `main` runs `.github/workflows/deploy.yml` (tests, then rsync over SSH to Namecheap cPanel). One-time server setup is in `docs/DEPLOYMENT.md`.
+- MySQL engine is pinned to InnoDB in `config/database.php`; WAMP defaults to MyISAM, which silently breaks `RefreshDatabase` rollbacks.
 - **Tests:** `phpunit.xml` only registers the `Unit` and `Feature` suites. `tests/Integration/` exists but is **not** run by `php artisan test` — invoke it by path if needed.
 - `AppServiceProvider::boot()` sets `Schema::defaultStringLength(191)` (MySQL index-length workaround) — keep in mind when adding string columns/migrations.
 - Telescope (`/telescope`) is installed for local debugging; it's disabled in the test env.
