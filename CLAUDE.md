@@ -33,21 +33,21 @@ Prefix any `artisan`/`npm`/`test` command with `./vendor/bin/sail` to run it ins
 ## Architecture
 
 ### Request intake flow (the heart of the app)
-`POST /contact/create` → `CustomerInformationController@create`:
-1. Validates the vehicle/contact fields.
-2. Persists a `CustomerInformation` model (mass-assigned from `$request->all()` — keep the model's `$fillable` in sync with the form fields).
-3. Sends `CustomerInformationMail` (Mailgun) to `ADMIN_EMAIL`, cc `ADMIN_CC_EMAIL`. Mail failure is caught and degraded to a flash warning rather than failing the request.
+`POST /contact/create` → `CustomerInformationController@create` (rate-limited via `throttle:5,1`):
+1. **Honeypot check**: if the hidden `website` field is filled, it's treated as a bot — the controller fakes a success redirect without saving or emailing. Keep the `website` input hidden (CSS) in the form, never collect a real value there.
+2. Validates the vehicle/contact fields, then persists a `CustomerInformation` model from the **validated** subset (`CustomerInformation::create($validated)`) — so a new form field needs adding in *three* places to round-trip: the `$request->validate([...])` rules, the model's `$fillable`, and the Blade form.
+3. Sends `CustomerInformationMail` (Mailgun) to `ADMIN_EMAIL`, cc `ADMIN_CC_EMAIL` (both read via `env()` with hardcoded fallbacks). Mail failure is caught and degraded to a flash warning rather than failing the request.
 
 Admins review submissions at `GET /complaints` (`auth`-gated), rendered by `complaint_list.blade.php`.
 
 ### Mail observability
-`LogMailListener` logs every send attempt/success/failure to the dedicated `mail` log channel and emails an admin alert on failure. It is wired manually in `AppServiceProvider::boot()` via `Event::listen(...)` (not auto-discovered). Note: this wiring currently registers all three handlers against `MessageSending` — when touching mail logging, verify the listener is bound to the intended `MessageSending` / `MessageSent` / `MessageFailed` events.
+`LogMailListener` logs send attempts/successes to the dedicated `mail` log channel and emails an admin alert on failure. The two real Laravel events are wired manually in `AppServiceProvider::boot()` via `Event::listen(...)` (not auto-discovered): `MessageSending` → `handleMessageSending`, `MessageSent` → `handleMessageSent`. **Laravel dispatches no `MessageFailed` event** — send failures throw, so `handleMessageFailed()` is a plain method invoked from the `catch` block at the call site (`CustomerInformationController@create`), not an event listener.
 
 ### Auth
-Session-based `web` guard plus Sanctum (`statefulApi` enabled in `bootstrap/app.php`). Registration (`AuthController@register`) is gated by a **hardcoded email allowlist** — only specific addresses may create accounts. There is no public signup. The `EnsureTokenIsValid` middleware is appended globally in `bootstrap/app.php` but its check is currently commented out (pass-through).
+Session-based `web` guard plus Sanctum (`statefulApi` enabled in `bootstrap/app.php`). Registration (`AuthController@register`) is gated by a **hardcoded email allowlist** (literal address comparison inside the method — currently `zachgallant26@gmail.com` / `sebgallant@hotmail.com`); any other email is rejected. There is no public signup. Auth POST endpoints are `throttle:5,1`. The `EnsureTokenIsValid` middleware is appended globally in `bootstrap/app.php` but its check is currently commented out (pass-through).
 
 ### Routing notes
-All routes are in `routes/web.php` (Laravel 11 has no `RouteServiceProvider`; routes/middleware are registered in `bootstrap/app.php`). The file contains some duplicate/overlapping `login`/`signin`/`logout` and `complaints` definitions — when editing auth or complaint routes, check for an earlier conflicting definition rather than assuming one mapping.
+All routes are in `routes/web.php` (Laravel 11 has no `RouteServiceProvider`; routes/middleware are registered in `bootstrap/app.php`). The file defines `login`/`signin`/`logout` and `complaints` **more than once** (e.g. `login`/`signin` first as view closures, then re-bound to `AuthController`; `complaints` once inside the `auth` group and again standalone with `->middleware('auth')`) — the **last** matching definition wins, so when editing auth or complaint routes check for an earlier conflicting definition rather than assuming one mapping. SEO routes `/robots.txt` and `/sitemap.xml` are generated dynamically (not static files) so the host/Sitemap URL is correct on any domain.
 
 ### Frontend build
 Vite entry points are declared in `vite.config.js`: `resources/scss/app.scss` and `resources/js/app.js`. SCSS lives under `resources/scss/` (page-specific partials in `resources/scss/pages/`). Reference compiled assets in Blade with `@vite([...])`. `@` aliases to `/resources`.
