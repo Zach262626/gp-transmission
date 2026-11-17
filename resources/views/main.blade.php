@@ -79,7 +79,7 @@
     <div id="Main">
         <div class="container mt-4">
             <div class="row align-items-center">
-                <div class="col-md-5 p-2">
+                <div class="col-12 col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-1">
                         <h2 class="main-item-header fs-1" style="z-index:11; position: relative;">TIRES</h2>
                         <div class="main-item-description"><picture>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 p-2">
+                <div class="col-12 col-md-7 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-2">
                         <h2 class="main-item-header">TRANSMISSIONS</h2>
                         <div class="main-item-description"><picture>
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-md-4 p-2">
+                <div class="col-6 col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-3">
                         <h2 class="main-item-header">MOTOR VEHICLE INSPECTION</h2>
                         <div class="main-item-description"><picture>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 p-2">
+                <div class="col-6 col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-4">
                         <h2 class="main-item-header">OIL
                             CHANGES</h2>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 p-2">
+                <div class="col-6 col-md-4 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-5">
                         <h2 class="main-item-header">BRAKES</h2>
                         <div class="main-item-description"><picture>
@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="row align-items-center mb-5">
-                <div class="col-md-7 p-2">
+                <div class="col-12 col-md-7 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-6">
                         <h2 class="main-item-header">TUNE
                             UPS</h2>
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 p-2">
+                <div class="col-12 col-md-5 p-2">
                     <div class="main-item-md shadow-lg" id="main-item-7">
                         <h2 class="main-item-header">+ SUSPENSION</h2>
                         <h2 class="main-item-header">+ AIR CONDITIONER</h2>

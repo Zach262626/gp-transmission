@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="Experts in transmission repair and auto services in Campbellton. Call 506-790-7776 or submit a service request form.">
+    {{-- jQuery: single synchronous copy. The /testing page's classic inline scripts and select2 need it before parse, so do NOT add defer. --}}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>GP Transmission</title>
     <link rel="canonical" href="{{ url()->current() }}">
 
