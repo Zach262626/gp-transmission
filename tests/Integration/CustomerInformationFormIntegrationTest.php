@@ -49,8 +49,8 @@ class CustomerInformationFormIntegrationTest extends TestCase
         // Verify email was sent
         Mail::assertSent(CustomerInformationMail::class);
         Mail::assertSent(CustomerInformationMail::class, function ($mail) {
-            return $mail->hasTo(env('ADMIN_EMAIL', 'sebgallant@hotmail.com')) &&
-                   $mail->hasCc(env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com'));
+            return $mail->hasTo(config('mail.admin.address')) &&
+                   $mail->hasCc(config('mail.admin.cc'));
         });
     }
 
@@ -359,13 +359,13 @@ class CustomerInformationFormIntegrationTest extends TestCase
             $hasCc = false;
 
             foreach ($mail->to as $recipient) {
-                if ($recipient['address'] === env('ADMIN_EMAIL', 'sebgallant@hotmail.com')) {
+                if ($recipient['address'] === config('mail.admin.address')) {
                     $hasTo = true;
                 }
             }
 
             foreach ($mail->cc as $recipient) {
-                if ($recipient['address'] === env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com')) {
+                if ($recipient['address'] === config('mail.admin.cc')) {
                     $hasCc = true;
                 }
             }

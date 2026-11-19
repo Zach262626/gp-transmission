@@ -132,8 +132,8 @@ class CustomerInformationControllerTest extends TestCase
         $this->post(route('customerInformationCreate'), $this->validData);
 
         Mail::assertSent(CustomerInformationMail::class, function ($mail) {
-            return $mail->hasTo(env('ADMIN_EMAIL', 'sebgallant@hotmail.com')) &&
-                   $mail->hasCc(env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com'));
+            return $mail->hasTo(config('mail.admin.address')) &&
+                   $mail->hasCc(config('mail.admin.cc'));
         });
     }
 

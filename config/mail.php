@@ -121,4 +121,20 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Sebastien Gallant'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Admin Notification Recipients
+    |--------------------------------------------------------------------------
+    |
+    | Who receives new service-request emails and mail-failure alerts. Read
+    | via config() (not env()) so the values survive `php artisan config:cache`
+    | in production.
+    |
+    */
+
+    'admin' => [
+        'address' => env('ADMIN_EMAIL', 'sebgallant@hotmail.com'),
+        'cc' => env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com'),
+    ],
+
 ];

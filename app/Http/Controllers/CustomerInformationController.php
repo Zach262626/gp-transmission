@@ -37,11 +37,11 @@ class CustomerInformationController extends Controller
         // Persist only validated fields (avoids mass-assigning arbitrary request input).
         $customer_info = CustomerInformation::create($validated);
 
-        $adminEmail = env('ADMIN_EMAIL', 'sebgallant@hotmail.com');
+        $adminEmail = config('mail.admin.address');
 
         try {
             Mail::to($adminEmail)
-                ->cc(env('ADMIN_CC_EMAIL', 'hatrickzach@gmail.com'))
+                ->cc(config('mail.admin.cc'))
                 ->send(new CustomerInformationMail($customer_info));
 
             return redirect()->route('main')->with('success', 'Thank you! Your information has been submitted successfully.');

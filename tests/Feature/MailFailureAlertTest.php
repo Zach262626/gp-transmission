@@ -35,7 +35,7 @@ class MailFailureAlertTest extends TestCase
      */
     public function test_admin_email_is_configured()
     {
-        $adminEmail = env('ADMIN_EMAIL', config('mail.from.address'));
+        $adminEmail = config('mail.admin.address');
         $this->assertNotEmpty($adminEmail);
     }
 
